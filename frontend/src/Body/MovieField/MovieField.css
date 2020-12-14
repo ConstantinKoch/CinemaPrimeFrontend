@@ -1,0 +1,15 @@
+.view {
+    background-color: #282c34;
+    margin: 10px 10px 10px 10px;
+    color: white;
+    width: fit-content;
+    block-size: fit-content;
+}
+
+.movieTitle {
+    padding-bottom: 10px;
+}
+
+.overview {
+    padding-top: 10px;
+}
