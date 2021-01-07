@@ -4,6 +4,7 @@ import './App.css';
 import Body from './Body/Body';
 import Navbar from './Body/Navbar/Navbar';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Footer from './Body/Footer/Footer';
 
 function App() {
 	return (
@@ -13,6 +14,7 @@ function App() {
 				<Switch>
 					<Route path="/" exact component={Body} />
 				</Switch>
+				<Footer />
 			</Router>
 		</div>
 	);
