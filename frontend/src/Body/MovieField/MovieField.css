@@ -1,15 +1,120 @@
-.view {
-    background-color: #282c34;
-    margin: 10px 10px 10px 10px;
-    color: white;
-    width: fit-content;
-    block-size: fit-content;
+.movieLink {
+	padding: 10px;
+	text-decoration: none;
+	margin-bottom: 10px;
+	display: flex;
+	flex-flow: column;
+	box-shadow: 0 6px 20px rgba(56, 125, 255, 0.17);
+	-webkit-filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
+	filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
+	border-radius: 10px;
+	text-decoration: none;
+	transition: all 0.2s linear;
+}
+
+.movieLink:hover {
+	transform: scale(1.05);
+}
+
+.movieImg {
+	display: block;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	max-width: 100%;
+	max-height: 100%;
+	object-fit: cover;
+}
+
+.cards__item__info {
+	padding: 20px 30px 30px;
 }
 
 .movieTitle {
-    padding-bottom: 10px;
+	text-align: center;
+	color: black;
+	padding-bottom: 10px;
+	text-decoration: none;
+	font-size: 22px;
+	font-weight: bold;
 }
 
 .overview {
-    padding-top: 10px;
+	padding-top: 10px;
+	color: black;
+	text-decoration: none;
+	max-lines: 3;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 4; /* number of lines to show */
+	-webkit-box-orient: vertical;
+	white-space: break-word;
+	overflow: hidden;
+	line-height: 24px;
+	font-size: 16px;
 }
+
+/* 2. Version mit Abrundungen
+.movieLink {
+	width: 80%;
+	padding: 10px;
+	text-decoration: none;
+	margin-bottom: 10px;
+	display: flex;
+	flex-flow: column;
+	box-shadow: 0 6px 20px rgba(56, 125, 255, 0.17);
+	-webkit-filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
+	filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
+	border-radius: 10px;
+	text-decoration: none;
+	transition: all 0.2s linear;
+}
+
+.movieLink:hover {
+	transform: scale(1.05);
+}
+
+.movieImg {
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	max-width: 100%;
+	max-height: 100%;
+	object-fit: cover;
+	overflow: hidden;
+	border-radius: 10px 10px 0px 0px; brauch man, damit Bild oben auch rund ist
+}
+
+.cards__item__info {
+	margin-top: 360px;
+	padding: 20px 30px 10px;
+}
+
+.movieTitle {
+	text-align: center;
+	color: black;
+	padding-bottom: 10px;
+	text-decoration: none;
+	font-size: 22px;
+	font-weight: bold;
+}
+
+.overview {
+	color: black;
+	text-decoration: none;
+	max-lines: 3;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 4; number of lines to show
+	-webkit-box-orient: vertical;
+	white-space: break-word;
+	overflow: hidden;
+	line-height: 24px;
+	font-size: 16px;
+}
+*/
