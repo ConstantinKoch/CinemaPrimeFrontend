@@ -94,14 +94,14 @@
 
 .cards__item__info {
 	text-align: center;
-	margin-top: 150%;
-	padding: 20px 30px 10px;
+	margin-top: 146%;
+	padding: 10px 10px 10px 10px;
 }
 
 .movieTitle {
 	text-align: center;
 	color: black;
-	padding-bottom: 10px;
+	padding-bottom: 8px;
 	text-decoration: none;
 	font-size: 22px;
 	font-weight: bold;
