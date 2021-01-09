@@ -15,7 +15,7 @@ export default class MovieField extends React.Component<IProps, IState> {
 
     render() {
         return (
-            <Grid item className="view" xs={3}>
+            <Grid item className="view" xs={12} sm ={6} md={4} lg={3}>
                 <Link className="movieLink" to={this.props.movie.path!==undefined ? this.props.movie.path : '/'}>
                 <figure className="cards__item__pic-wrap">
                     <img className="movieImg" src={"https://image.tmdb.org/t/p/w500" + this.props.movie.poster_path} alt={this.props.movie.title + " Movie Poster"} />

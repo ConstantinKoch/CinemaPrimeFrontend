@@ -1,3 +1,5 @@
+/* 1. Design mit Abstand beim Bild:
+
 .movieLink {
 	padding: 10px;
 	text-decoration: none;
@@ -47,15 +49,15 @@
 	max-lines: 3;
 	text-overflow: ellipsis;
 	display: -webkit-box;
-	-webkit-line-clamp: 4; /* number of lines to show */
+	-webkit-line-clamp: 4; /* number of lines to show 
 	-webkit-box-orient: vertical;
 	white-space: break-word;
 	overflow: hidden;
 	line-height: 24px;
 	font-size: 16px;
-}
+}*/
 
-/* 2. Version mit Abrundungen
+/* 2. Version mit Abrundungen*/
 .movieLink {
 	width: 80%;
 	padding: 10px;
@@ -87,11 +89,12 @@
 	max-height: 100%;
 	object-fit: cover;
 	overflow: hidden;
-	border-radius: 10px 10px 0px 0px; brauch man, damit Bild oben auch rund ist
+	border-radius: 10px 10px 0px 0px;
 }
 
 .cards__item__info {
-	margin-top: 360px;
+	text-align: center;
+	margin-top: 150%;
 	padding: 20px 30px 10px;
 }
 
@@ -110,11 +113,10 @@
 	max-lines: 3;
 	text-overflow: ellipsis;
 	display: -webkit-box;
-	-webkit-line-clamp: 4; number of lines to show
+	-webkit-line-clamp: 4;
 	-webkit-box-orient: vertical;
 	white-space: break-word;
 	overflow: hidden;
 	line-height: 24px;
 	font-size: 16px;
 }
-*/
