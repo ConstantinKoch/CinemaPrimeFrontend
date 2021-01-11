@@ -1,6 +1,8 @@
+import { TextField } from '@material-ui/core';
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Button, { STYLES, SIZES } from '../Button/Button';
+//import Button, { STYLES, SIZES } from '../Button/Button';
+import Button from '@material-ui/core/Button';
 import './Footer.css';
 
 function Footer() {
@@ -12,16 +14,34 @@ function Footer() {
 				</p>
 				<p className="footer-subscription-text">You can unsubscribe at any time.</p>
 				<div className="input-areas">
-					<form>
-						<input type="email" name="email" placeholder="Your Email" className="footer-input" />
-						<Button
-							type="submit"
-							url="/"
-							buttonSize={SIZES['btn--large']}
-							buttonStyle={STYLES['btn--outline']}
-							text="Subscribe!"
-						/>
-					</form>
+					{/*<input
+						type="email"
+						name="email"
+						placeholder="Your Email"
+						className="footer-input"
+						//placeholderTextColor="white"
+					/>*/}
+					<TextField
+						className="footer-input"
+						color="primary"
+						label="Your Email"
+						id="standard-basic"
+						type="email"
+						name="email"
+						InputLabelProps={{
+							style: {
+								textOverflow: 'ellipsis',
+								whiteSpace: 'nowrap',
+								overflow: 'hidden',
+								color: 'white'
+							}
+						}}
+						//placeholderTextColor="white"
+					/>
+					&nbsp; &nbsp;
+					<div className="footer-button">
+						<Button variant="contained">Subscribe</Button>
+					</div>
 				</div>
 			</section>
 			<div className="footer-links">

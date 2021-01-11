@@ -4,6 +4,7 @@ import './App.css';
 import Body from './Body/Body';
 import Navbar from './Body/Navbar/Navbar';
 import Footer from './Body/Footer/Footer';
+import DetailMoviePage from './Body/DetailMoviePage/DetailMoviePage';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
 			<Router>
 				<Navbar />
 				<Switch>
+					<Route path="/movieDetails" component={DetailMoviePage} />
 					<Route path="/" exact component={Body} />
 				</Switch>
 				<Footer />
