@@ -1,5 +1,5 @@
 import React from "react";
-import Movie from "../../Models/Movie";
+import Movie from "../../../Models/Movie";
 import axios from "axios";
 import MovieField from "../MovieField/MovieField";
 import "./MovieView.css";
@@ -28,7 +28,8 @@ export default class MovieView extends React.Component<IProps, IState> {
 
     render() {
         return (
-            <Grid container spacing={5}>
+            <Grid container justify="space-evenly"
+                  alignItems="flex-start" spacing={5}>
                 {this.state.runningMovies == null ?
                     <Grid item xs={12}>"No Movies Found!"</Grid> : this.state.runningMovies.map(i => {
                         return <MovieField movie={i} key={i.id} />
