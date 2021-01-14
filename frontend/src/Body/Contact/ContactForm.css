@@ -1,0 +1,14 @@
+.contactform_map {
+	padding: 2rem 2rem 2rem 2rem;
+	flex-grow: 1;
+}
+
+.map {
+	width: 400px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.map_div {
+	height: 450px;
+}
