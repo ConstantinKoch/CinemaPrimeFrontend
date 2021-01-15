@@ -12,7 +12,6 @@ interface IState {
 }
 
 export default class MovieField extends React.Component<IProps, IState> {
-
     render() {
         return (
             <Grid item className="view" xs={12} sm ={6} md={4} lg={3}>

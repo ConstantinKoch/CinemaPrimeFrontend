@@ -32,14 +32,14 @@ var MapContainer = /** @class */ (function (_super) {
             activeMarker: {},
             selectedPlace: {}
         };
-        _this.onMarkerClick = function (props, marker, e) {
+        _this.onMarkerClick = function (props, marker) {
             return _this.setState({
                 selectedPlace: props,
                 activeMarker: marker,
                 showingInfoWindow: true
             });
         };
-        _this.onMapClicked = function (props) {
+        _this.onMapClicked = function () {
             if (_this.state.showingInfoWindow) {
                 _this.setState({
                     showingInfoWindow: false,

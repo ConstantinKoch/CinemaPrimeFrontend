@@ -26,24 +26,35 @@ const ContactForm = () => {
 		alert(result.status);
 	};
 	return (
-		<Grid container className="contactform_map" justify="space-evenly" alignItems="flex-start" direction="row">
+		<Grid
+			container
+			className="contactform_map"
+			justify="center"
+			spacing={6}
+			alignItems="flex-start"
+			direction="row"
+		>
 			<Grid item xs={12} sm={12} md={6} lg={6}>
 				<p>Kontakt:</p>
-				<form onSubmit={handleSubmit}>
-					<div>
-						<label htmlFor="name">Name:</label>
-						<input type="text" id="name" required />
-					</div>
-					<div>
-						<label htmlFor="email">Email:</label>
-						<input type="email" id="email" required />
-					</div>
-					<div>
-						<label htmlFor="message">Message:</label>
-						<textarea id="message" required />
-					</div>
-					<button type="submit">{status}</button>
-				</form>
+				<div className="container">
+					<form onSubmit={handleSubmit}>
+						<div className="nameField">
+							<div id="nameText">Name:</div>
+							<input type="text" id="name" required />
+						</div>
+						<div className="emailField">
+							<div id="emailText">Email:</div>
+							<input type="email" id="email" required />
+						</div>
+						<div className="messageField">
+							<div id="messageText">Message:</div>
+							<textarea id="message" required />
+						</div>
+						<button className="input" type="submit" id="submitButton">
+							{status}
+						</button>
+					</form>
+				</div>
 			</Grid>
 			<Grid item xs={12} sm={12} md={6} lg={6}>
 				<div className="map_div">
