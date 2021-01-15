@@ -5,7 +5,7 @@ import { Grid } from '@material-ui/core';
 
 const ContactForm = () => {
 	const [ status, setStatus ] = useState('Submit');
-	const handleSubmit = async (e) => {
+	const handleSubmit = async (e: any) => {
 		e.preventDefault();
 		setStatus('Sending...');
 		const { name, email, message } = e.target.elements;
