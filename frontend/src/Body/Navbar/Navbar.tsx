@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import Button, { SIZES, STYLES } from '../Button/Button';
 import './Navbar.css';
 
 function Navbar() {
@@ -25,10 +24,11 @@ function Navbar() {
 	window.addEventListener('resize', showButton);
 
 	return (
+		<>
 		<nav className="navbar">
 			<div className="navbar-container">
-				<Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-					CinemaPrime <i className="fab fa-typo3" />
+				<Link style={{ whiteSpace: 'pre-wrap' }} to="/" className="navbar-logo" onClick={closeMobileMenu}>
+					CinemaPrime  <i className="fas fa-film"/>
 				</Link>
 				<div className="menu-icon" onClick={handleClick}>
 					<i className={click ? 'fas fa-times' : 'fas fa-bars'} />
@@ -40,8 +40,8 @@ function Navbar() {
 						</Link>
 					</li>
 					<li className="nav-item">
-						<Link to="/services" className="nav-links" onClick={closeMobileMenu}>
-							Services
+						<Link to="/programm" className="nav-links" onClick={closeMobileMenu}>
+							Program
 						</Link>
 					</li>
 					<li className="nav-item">
@@ -49,23 +49,11 @@ function Navbar() {
 							Contact
 						</Link>
 					</li>
-					<li className="nav-item">
-						<Link to="/sign-up" className="nav-links-mobile" onClick={closeMobileMenu}>
-							Sign Up
-						</Link>
-					</li>
 				</ul>
-				{button && (
-					<Button
-						type="submit"
-						url="/"
-						text="Sign-up"
-						buttonSize={SIZES['btn--large']}
-						buttonStyle={STYLES['btn--outline']}
-					/>
-				)}
 			</div>
 		</nav>
+
+		</>
 	);
 }
 

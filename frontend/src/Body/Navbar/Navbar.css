@@ -14,7 +14,6 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin-right: 20px;
 	height: 80px;
 	max-width: 1500px;
 }
@@ -37,7 +36,7 @@
 
 .nav-menu {
 	display: grid;
-	grid-template-columns: repeat(4, auto);
+	grid-template-columns: repeat(3, auto);
 	grid-gap: 10px;
 	list-style: none;
 	text-align: center;
@@ -76,7 +75,7 @@
 	display: none;
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 960px) {
 	.NavbarItems {
 		position: relative;
 	}
@@ -123,7 +122,8 @@
 
 	.menu-icon {
 		display: block;
-		position: relative;
+		position: absolute;
+		padding-right: 10px;
 		top: 0;
 		right: 0;
 		transform: translate(-100%, 60%);
@@ -139,8 +139,8 @@
 	.nav-links-mobile {
 		display: block;
 		text-align: center;
-		margin: 2rem auto;
 		border-radius: 4px;
+		margin: 2rem auto;
 		width: 80%;
 		text-decoration: none;
 		font-size: 1.5rem;
