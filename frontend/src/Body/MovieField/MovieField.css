@@ -63,6 +63,7 @@
 	padding: 10px;
 	text-decoration: none;
 	margin-bottom: 10px;
+	margin-left: 20px;
 	display: flex;
 	flex-flow: column;
 	box-shadow: 0 6px 20px rgba(56, 125, 255, 0.17);
@@ -94,16 +95,17 @@
 
 .cards__item__info {
 	text-align: center;
-	margin-top: 146%;
+	margin-top: 162%;
 	padding: 10px 10px 10px 10px;
 }
 
 .movieTitle {
 	text-align: center;
 	color: black;
-	padding-bottom: 8px;
+	padding-top: 10px;
+	padding-bottom: 10px;
 	text-decoration: none;
-	font-size: 22px;
+	font-size: 24px;
 	font-weight: bold;
 }
 
@@ -117,6 +119,6 @@
 	-webkit-box-orient: vertical;
 	white-space: break-word;
 	overflow: hidden;
-	line-height: 24px;
+	line-height: 25px;
 	font-size: 16px;
 }

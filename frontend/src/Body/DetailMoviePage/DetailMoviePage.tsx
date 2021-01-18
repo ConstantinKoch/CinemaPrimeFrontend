@@ -7,6 +7,10 @@ import { Grid } from '@material-ui/core';
 import Button from '@material-ui/core/Button';
 import Select from 'react-select';
 import { Link } from 'react-router-dom';
+import YTSearch from 'youtube-api-search';
+import ReactPlayer from "react-player"
+
+let API_KEY = process.env.REACT_APP_YOUTUBE_API_KEY;
 
 interface IProps {
 }
@@ -18,6 +22,8 @@ interface IState {
 	movie?: Movie;
 	book_path?: String;
 	selected_date?: String;
+	videos_arr?: any[];
+	displayVideo?: any;
 }
 
 const options = [
@@ -44,8 +50,19 @@ export default class DetailMoviePage extends Component<IProps, IState> {
 		console.log("Fruit Selected!!");
 		this.setState({ selected_date : e.target.value });
 	}
+
+	videoSearch = () => {
+		const term_str = this.state.movie?.title + " Trailer";
+		YTSearch({key: API_KEY, term: term_str}, (videos: any[]) => {
+			this.setState({
+				videos_arr : videos,
+				displayVideo : videos[0]
+			}
+		)});
+	}
 	
 	render(): JSX.Element {
+		this.videoSearch()
 		return (
 			<Grid
 			container
@@ -60,6 +77,8 @@ export default class DetailMoviePage extends Component<IProps, IState> {
 				<img    className="movieDetails_img"
 						src={'https://image.tmdb.org/t/p/w500' + this.state.movie?.poster_path}
 						alt={this.state.movie?.title + ' Movie Poster'}/>
+
+				<ReactPlayer>this.state.displayVideo</ReactPlayer>
 				</div>
 			</Grid>
 
