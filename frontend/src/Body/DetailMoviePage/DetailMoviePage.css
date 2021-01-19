@@ -1,16 +1,17 @@
 .movieDetails_img {
-    width: 400px;
-    height: 100%;
+	width: 400px;
+	height: 100%;
 	text-decoration: none;
 	margin-bottom: 10px;
-    border-radius: 15px;
-    overflow: hidden;
+	border-radius: 15px;
+	overflow: hidden;
 }
 
-.movieDetails_info_div{
-    padding-right: 20%;
-    padding-left: 20%;
-    padding-top: 20px;
+.movieDetails_info_div {
+	text-align: center;
+	padding-right: 20%;
+	padding-left: 20%;
+	padding-top: 20px;
 }
 
 .movieDetails_title {
@@ -33,18 +34,27 @@
 	white-space: break-word;
 	overflow: hidden;
 	line-height: 24px;
-    font-size: 16px;
-    margin-bottom: 40px;
+	font-size: 16px;
+	margin-bottom: 40px;
 }
 
-.movieDetails_btn{
-    margin-top: 80px;
+.movieDetails_btn {
+	margin: 10px;
 }
 
-.movieDetails_select{
-    position: relative;
-    align-items: center;
-  justify-content: center;
-  
+.movieDetails_select {
+	position: relative;
+	display: block;
+	margin: 0 auto;
+	width: 400px;
+	align-items: center;
+	justify-content: center;
+}
 
+.movieDetails_btns_div {
+	margin-top: 80px;
+}
+
+.movieLink_booking {
+	margin-left: 10px;
 }
