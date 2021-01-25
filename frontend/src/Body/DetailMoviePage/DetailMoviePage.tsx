@@ -7,13 +7,11 @@ import { Grid } from '@material-ui/core';
 import Button from '@material-ui/core/Button';
 import Select from 'react-select';
 import { Link } from 'react-router-dom';
-//import YTSearch from 'youtube-api-search';
+import YTSearch from 'youtube-api-search';
 import ReactPlayer from "react-player";
 //import * as youtubeSearch from "youtube-search";
-import { stdout } from 'process';
 
-
-let API_KEY = process.env.REACT_APP_GOOGLE_API_KEY;
+let API_KEY = process.env.REACT_APP_YT_API_KEY;
 
 interface IProps {
 }
@@ -62,31 +60,26 @@ export default class DetailMoviePage extends Component<IProps, IState> {
 	}
 
 	videoSearch = (): void => {
-		const {exec } = require('child_process');
 		//exec(`ytSearch ${this.state.movie?.title} Trailer -f "%u" --limit 5`)
 		//this.setState({ displayVideo : result[0]['id']['videoId']});
-		console.log(`stdout: ${stdout}`)
-
-		//console.log(this.state.displayVideo);
-		
-		/*
+	
 		const term_str = this.state.movie?.title + " Trailer";
 		YTSearch({key: API_KEY, term: term_str}, (videos: any[]) => {
 			this.setState({
 				videos_arr : videos,
 				displayVideo : videos[0]
 			}
-		)});*/
+		)});
+		console.log(this.state.displayVideo);
 	}
 	
 	render(): JSX.Element {
-		console.log(this.state.videos_arr)
 		return (
 			<Grid
 			container
 			className="contactform_map"
 			justify="center"
-			spacing={6}
+			spacing={0}
 			alignItems="flex-start"
 			direction="row"
 		>
@@ -96,7 +89,7 @@ export default class DetailMoviePage extends Component<IProps, IState> {
 						src={'https://image.tmdb.org/t/p/w500' + this.state.movie?.poster_path}
 						alt={this.state.movie?.title + ' Movie Poster'}/>
 
-				<ReactPlayer url={`https://www.youtube.com/watch?v=EAyo3_zJj5c&ab_channel=CodingShiksha`} />
+				<ReactPlayer url={`https://www.youtube.com/watch?v=${this.state.displayVideo?.id.videoId}`} />
 				</div>
 			</Grid>
 

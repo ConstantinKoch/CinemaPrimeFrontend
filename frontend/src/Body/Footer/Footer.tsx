@@ -62,8 +62,7 @@ function Footer() {
 				<div className="social-media-wrap">
 					<div className="footer-logo">
 						<Link to="/" className="social-logo">
-							CinemaPrime
-							<i className="fab fa-typo3" />
+							CinemaPrime &nbsp; <i className="fas fa-film" />
 						</Link>
 					</div>
 					<small className="website-rights">CinemaPrime © 2021</small>

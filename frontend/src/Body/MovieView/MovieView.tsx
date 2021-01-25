@@ -24,7 +24,15 @@ export default class MovieView extends React.Component<IProps, IState> {
 
 	render() {
 		return (
-			<Grid container className="gridView" spacing={5}>
+			<Grid
+				container
+				className="gridView"
+				spacing={2}
+				style={{
+					margin: 0,
+					width: '100%'
+				}}
+			>
 				{this.state.runningMovies == null ? (
 					<Grid item xs={12}>
 						"No Movies Found!"

@@ -30,7 +30,7 @@ const ContactForm = () => {
 			container
 			className="contactform_map"
 			justify="center"
-			spacing={6}
+			spacing={0}
 			alignItems="flex-start"
 			direction="row"
 		>

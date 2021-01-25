@@ -31,8 +31,12 @@
 	margin: 6px;
 }
 
-.landing-btn-program {
-	margin-left: 5px;
+.landing-link-program {
+	text-decoration: none;
+}
+
+.landing-link-contact {
+	text-decoration: none;
 }
 
 .fa-play-circle {
