@@ -27,7 +27,7 @@ function Navbar() {
 		<nav className="navbar">
 			<div className="navbar-container">
 				<Link style={{ whiteSpace: 'pre-wrap' }} to="/" className="navbar-logo" onClick={closeMobileMenu}>
-					CinemaPrime <i className="fas fa-film" />
+					CinemaPrime &nbsp; <i className="fas fa-film" />
 				</Link>
 				<div className="menu-icon" onClick={handleClick}>
 					<i className={click ? 'fas fa-times' : 'fas fa-bars'} />
@@ -39,7 +39,7 @@ function Navbar() {
 						</Link>
 					</li>
 					<li className="nav-item">
-						<Link to="/" className="nav-links" onClick={closeMobileMenu}>
+						<Link to="/program" className="nav-links" onClick={closeMobileMenu}>
 							Program
 						</Link>
 					</li>
