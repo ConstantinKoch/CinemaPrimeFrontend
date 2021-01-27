@@ -26,6 +26,7 @@ export default class MovieView extends React.Component<IProps, IState> {
 		return (
 			<Grid
 				container
+				direction="row"
 				className="gridView"
 				spacing={2}
 				style={{

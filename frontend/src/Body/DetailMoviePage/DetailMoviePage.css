@@ -9,6 +9,7 @@
 
 .movieDetails_info_div {
 	text-align: center;
+	margin-top: 80px;
 	padding-right: 20%;
 	padding-left: 20%;
 	padding-top: 20px;
@@ -20,22 +21,15 @@
 	padding-bottom: 8px;
 	text-decoration: none;
 	font-size: 22px;
+	margin-bottom: 10px;
 	font-weight: bold;
 }
 
 .movieDetails_overview {
-	color: black;
+	color: blue;
 	text-decoration: none;
-	max-lines: 3;
-	text-overflow: ellipsis;
-	display: -webkit-box;
-	-webkit-line-clamp: 10;
-	-webkit-box-orient: vertical;
-	white-space: break-word;
-	overflow: hidden;
 	line-height: 24px;
 	font-size: 16px;
-	margin-bottom: 40px;
 }
 
 .movieDetails_btn {
@@ -51,10 +45,39 @@
 	justify-content: center;
 }
 
+.movieDetails_select_new {
+	position: relative;
+	display: block;
+	margin: 0 auto;
+	margin-top: 2em;
+	align-items: center;
+	justify-content: center;
+	width: 200px;
+	padding: 0.5em 0.75em;
+	color: #000;
+	font-size: 16px;
+	box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.3);
+	border-radius: 5px;
+	cursor: pointer;
+	border: 1px solid #eeeeee;
+	background-color: #eeeeee;
+}
+
+option:checked {
+	transition: all .2s ease-in-out;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+	background-color: #000 linear-gradient(0deg, red 0%, red 100%);
+}
+
 .movieDetails_btns_div {
-	margin-top: 80px;
+	margin-top: 30px;
 }
 
 .movieLink_booking {
-	margin-left: 10px;
+	margin-left: 15px;
+	text-decoration: none;
+}
+
+.movieLink_trailer {
+	text-decoration: none;
 }
