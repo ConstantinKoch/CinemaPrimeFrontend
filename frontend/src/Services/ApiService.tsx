@@ -1,4 +1,5 @@
-/*import axios from "axios";
+import axios from "axios";
+import Cinema from "../Models/Cinema";
 import Customer from "../Models/Customer";
 import Token from "../Models/Token";
 
@@ -60,6 +61,11 @@ export default class ApiService {
         let customerPromise = this.customerFetch(this.token);
         return customerPromise.then(res => res).catch(err => null);
     }
+
+    getAllCinemas(): Promise<Cinema> {
+        return axiosInstance.get<Cinema>("/cinema").then(res => res.data).catch(err => err);
+        
+    }
 }
 
 let axiosInstance = axios.create({
@@ -67,6 +73,4 @@ let axiosInstance = axios.create({
     headers: {
         'Content-Type': 'application/json'
     }
-})*/
-
-export default class ApiService {}
+})

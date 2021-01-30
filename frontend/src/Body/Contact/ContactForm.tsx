@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import MapContainer from './MapContainer';
 import './ContactForm.css';
+import Button from '@material-ui/core/Button';
 import { Grid } from '@material-ui/core';
 
 const ContactForm = () => {
@@ -50,9 +51,9 @@ const ContactForm = () => {
 							<div id="messageText">Message:</div>
 							<textarea id="message" required />
 						</div>
-						<button className="input" type="submit" id="submitButton">
+						<Button className="input" type="submit" id="submitButton" variant="contained">
 							{status}
-						</button>
+						</Button>
 					</form>
 				</div>
 			</Grid>
