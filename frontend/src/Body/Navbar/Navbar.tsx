@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import Button from '@material-ui/core/Button';
 import './Navbar.css';
 
 function Navbar() {
@@ -48,6 +49,26 @@ function Navbar() {
 							Contact
 						</Link>
 					</li>
+					{click ? (
+						<li>
+							<Link to="/register" className="nav-links" onClick={closeMobileMenu}>
+								Sign up
+							</Link>
+						</li>
+					) : (
+						<li className="nav-item-register">
+							<Link className="nav-links-register" to="/register" onClick={closeMobileMenu}>
+								<Button
+									size={click ? 'medium' : 'large'}
+									className="nav-btn-register"
+									variant={click ? 'text' : 'outlined'}
+									color="inherit"
+								>
+									Sign up
+								</Button>
+							</Link>
+						</li>
+					)}
 				</ul>
 			</div>
 		</nav>

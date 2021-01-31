@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
 import {
-	Container,
-	Typography,
+	/*Container,
 	Button,
 	Grid,
+	CircularProgress,
+	Divider*/
+	Typography,
+	Paper,
 	Stepper,
 	Step,
-	StepLabel,
-	CircularProgress,
-	Divider,
-	Paper
+	StepLabel
 } from '@material-ui/core';
-import { Link } from 'react-router-dom';
+//import { Link } from 'react-router-dom';
 import './Checkout.css';
 import PaymentForm from './PaymentForm';
 

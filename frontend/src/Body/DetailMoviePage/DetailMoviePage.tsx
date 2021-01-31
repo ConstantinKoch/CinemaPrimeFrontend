@@ -5,11 +5,11 @@ import Movie from '../../Models/Movie';
 import './DetailMoviePage.css'
 import { Grid } from '@material-ui/core';
 import Button from '@material-ui/core/Button';
-import Select from 'react-select';
 import { Link } from 'react-router-dom';
 import YTSearch from 'youtube-api-search';
-import ReadMoreReact from 'read-more-react';
+/*import ReadMoreReact from 'read-more-react';
 import ReactShowMore from 'react-show-more';
+import Select from 'react-select';*/
 
 import ReadMoreAndLess from 'react-read-more-less';
 
@@ -22,7 +22,7 @@ interface IProps {
 
 interface IState {
 	runningMovies?: Movie[];
-	url?: String;
+	url: String;
 	lastSegment?: number;
 	movie?: Movie;
 	book_path?: String;
@@ -56,7 +56,7 @@ export default class DetailMoviePage extends Component<IProps, IState> {
 				runningMovies: result
 			});
 		}).then((): void => {
-		this.setState({lastSegment : Number(this.state.url?.split('/').pop())})
+		this.setState({lastSegment : Number(this.state.url.split('/').pop())})
 		this.setState({movie : this.state.runningMovies?.filter(movie => movie.id === this.state.lastSegment).pop()}) 
 		this.videoSearch()
 		this.setState({finished_rendering : true})})
@@ -132,11 +132,11 @@ export default class DetailMoviePage extends Component<IProps, IState> {
 							<option value={option.value}>{option.label}</option>))}
 					</select>
 					<div className="movieDetails_btns_div">
-					<a className="movieLink_trailer" target="_blank" href={`https://www.youtube.com/watch?v=${this.state.displayVideo?.id.videoId}`}>
+					<a className="movieLink_trailer" target="_blank" rel="noreferrer" href={`https://www.youtube.com/watch?v=${this.state.displayVideo?.id.videoId}`}>
 						<Button className="movieDetails_btn_trailer" variant="contained">
 							Trailer
 						</Button>
-						</a>
+					</a>
 						<Link className="movieLink_booking" to={{pathname: (this.state.movie?.id!==undefined ? 
 							`/booking/${this.state.movie?.id}/${this.state.selected_date}` : '/')}}>
 						<Button className="movieDetails_btn" variant="contained">

@@ -1,0 +1,57 @@
+.aboutus_div {
+	margin: 9em;
+	margin-top: 2em;
+}
+
+.standardParagraph {
+	font-weight: bold;
+	padding-bottom: 10px;
+}
+
+.thirdParagraph {
+	font-weight: bold;
+	margin-left: 20px;
+}
+
+.tenthParagraph {
+	margin-left: 20px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.twelfthParagraph {
+	text-align: center;
+	font-weight: bold;
+}
+
+.thirteenthParagraph {
+	border: 1px solid #000000;
+	margin: 15em;
+	margin-top: 5px;
+	margin-bottom: 20px;
+
+	padding: 10px;
+}
+.fourteenthParagraph {
+	margin-left: 20px;
+	margin-top: 20px;
+}
+.fifteenthParagraph {
+	border: 1px solid #000000;
+	margin: 15em;
+	margin-top: 5px;
+	margin-bottom: 20px;
+	padding: 10px;
+}
+.sixteenthParagraph {
+	border: 1px solid #000000;
+	margin: 15em;
+	margin-top: 5px;
+	margin-bottom: 20px;
+	padding: 10px;
+}
+
+.seventeenthParagraph {
+	font-weight: bold;
+	padding-bottom: 10px;
+}

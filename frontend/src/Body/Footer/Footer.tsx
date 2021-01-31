@@ -1,4 +1,4 @@
-import { TextField } from '@material-ui/core';
+//import { TextField } from '@material-ui/core';
 import React from 'react';
 import { Link } from 'react-router-dom';
 //import Button, { STYLES, SIZES } from '../Button/Button';
@@ -47,7 +47,7 @@ function Footer() {
 			<div className="footer-links">
 				<div className="footer-link-wrapper">
 					<div className="footer-link-items">
-						<Link to="/">
+						<Link to="/aboutus">
 							<h2>About Us</h2>
 						</Link>
 					</div>

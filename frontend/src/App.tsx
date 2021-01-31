@@ -7,6 +7,10 @@ import LandingPage from './Body/LandingPage/LandingPage';
 import MovieView from './Body/MovieView/MovieView';
 import Cart from './Body/Cart/Cart';
 import Checkout from './Body/Checkout/Checkout';
+import ScrollToTop from './Body/ScrollToTop';
+//change to LoginRegister
+import LoginRegister from './Body/LoginRegister/Register';
+import AboutUs from './Body/AboutUs/AboutUs';
 
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
@@ -14,6 +18,8 @@ function App() {
 	return (
 		<div className="App">
 			<Router>
+				{/*//to secure the new page starts at top*/}
+				<ScrollToTop />
 				<Navbar />
 				<Switch>
 					<Route path="/movieDetails" component={DetailMoviePage} />
@@ -21,6 +27,8 @@ function App() {
 					<Route path="/program" exact component={MovieView} />
 					<Route path="/cart" exact component={Cart} />
 					<Route path="/checkout" exact component={Checkout} />
+					<Route path="/register" exact component={LoginRegister} />
+					<Route path="/aboutus" exact component={AboutUs} />
 					<Route path="/" exact component={LandingPage} />
 				</Switch>
 				<Footer />
