@@ -62,9 +62,10 @@ export default class ApiService {
         return customerPromise.then(res => res).catch(err => null);
     }
 
-    getAllCinemas(): Promise<Cinema> {
-        return axiosInstance.get<Cinema>("/cinema").then(res => res.data).catch(err => err);
+    getAllCinemas(): Promise<Cinema[]> {
         
+        return axiosInstance.get<Cinema[]>("/cinema").then(res => res.data).catch(err => err);
+
     }
 }
 

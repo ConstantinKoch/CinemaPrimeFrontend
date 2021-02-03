@@ -6,6 +6,7 @@ import DetailMoviePage from './Body/DetailMoviePage/DetailMoviePage';
 import LandingPage from './Body/LandingPage/LandingPage';
 import MovieView from './Body/MovieView/MovieView';
 import Cart from './Body/Cart/Cart';
+import SeatPage from './Body/SeatPage/SeatPage';
 import Checkout from './Body/Checkout/Checkout';
 import ScrollToTop from './Body/ScrollToTop';
 //change to LoginRegister
@@ -29,6 +30,7 @@ function App() {
 					<Route path="/checkout" exact component={Checkout} />
 					<Route path="/register" exact component={LoginRegister} />
 					<Route path="/aboutus" exact component={AboutUs} />
+					<Route path="/booking" exact component={SeatPage} />
 					<Route path="/" exact component={LandingPage} />
 				</Switch>
 				<Footer />

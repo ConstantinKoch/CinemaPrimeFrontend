@@ -3,6 +3,7 @@ import '../../App.css';
 import axios from 'axios';
 import Movie from '../../Models/Movie';
 import './DetailMoviePage.css'
+import Cinema from "../../Models/Cinema";
 import { Grid } from '@material-ui/core';
 import Button from '@material-ui/core/Button';
 import { Link } from 'react-router-dom';
@@ -12,6 +13,7 @@ import ReactShowMore from 'react-show-more';
 import Select from 'react-select';*/
 
 import ReadMoreAndLess from 'react-read-more-less';
+import ApiService from '../../Services/ApiService';
 
 //import * as youtubeSearch from "youtube-search";
 
@@ -31,6 +33,9 @@ interface IState {
 	videos_arr?: any[];
 	displayVideo?: any;
 	finished_rendering: boolean;
+	cinema_arr?: Cinema[];
+	cinema_one?: Cinema;
+
 }
 
 const options = [
@@ -42,7 +47,7 @@ const options = [
 
 export default class DetailMoviePage extends Component<IProps, IState> {
 	state:IState = ({finished_rendering: false, url : window.location.href, selected_date : '11_01_20', selected_label: 'test'})
-
+	
 	constructor(IProps: IProps | Readonly<IProps>){
 		super(IProps);
 		this.handleChange = this.handleChange.bind(this);
@@ -56,6 +61,9 @@ export default class DetailMoviePage extends Component<IProps, IState> {
 				runningMovies: result
 			});
 		}).then((): void => {
+			//this.setState({cinema_arr  : ApiService.apiService?.getAllCinemas().then(data -> data),
+				//cinema_one : this.state.cinema_arr[0]})
+			
 		this.setState({lastSegment : Number(this.state.url.split('/').pop())})
 		this.setState({movie : this.state.runningMovies?.filter(movie => movie.id === this.state.lastSegment).pop()}) 
 		this.videoSearch()
