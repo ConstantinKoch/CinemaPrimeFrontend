@@ -14,6 +14,7 @@ import Select from 'react-select';*/
 
 import ReadMoreAndLess from 'react-read-more-less';
 import ApiService from '../../Services/ApiService';
+import Screenings from "../../Models/Screenings";
 
 //import * as youtubeSearch from "youtube-search";
 
@@ -35,6 +36,7 @@ interface IState {
 	finished_rendering: boolean;
 	cinema_arr?: Cinema[];
 	cinema_one?: Cinema;
+	screenings?: Screenings[];
 
 }
 
@@ -63,11 +65,12 @@ export default class DetailMoviePage extends Component<IProps, IState> {
 		}).then((): void => {
 			//this.setState({cinema_arr  : ApiService.apiService?.getAllCinemas().then(data -> data),
 				//cinema_one : this.state.cinema_arr[0]})
-			
-		this.setState({lastSegment : Number(this.state.url.split('/').pop())})
-		this.setState({movie : this.state.runningMovies?.filter(movie => movie.id === this.state.lastSegment).pop()}) 
-		this.videoSearch()
-		this.setState({finished_rendering : true})})
+			this.setState({lastSegment : Number(this.state.url.split('/').pop())})
+			this.setState({movie : this.state.runningMovies?.filter(movie => movie.id === this.state.lastSegment).pop()})
+			ApiService.getInstance().getScreenings(this.state.movie?.id != undefined ? this.state.movie.id : 0).then(res => this.setState({ screenings: res}))
+
+			this.videoSearch()
+			this.setState({finished_rendering : true})})
 	}
 
 	handleChange(e: any) {
@@ -136,8 +139,8 @@ export default class DetailMoviePage extends Component<IProps, IState> {
         			/>*/}
 
 					<select value={this.state.selected_date} onChange={this.handleChange} className="movieDetails_select_new">
-						{options.map((option) => (
-							<option value={option.value}>{option.label}</option>))}
+						{this.state.screenings?.map((Screening) => (
+							<option value={Screening.id}>{Screening.date} {Screening.time}</option>))}
 					</select>
 					<div className="movieDetails_btns_div">
 					<a className="movieLink_trailer" target="_blank" rel="noreferrer" href={`https://www.youtube.com/watch?v=${this.state.displayVideo?.id.videoId}`}>
@@ -145,8 +148,9 @@ export default class DetailMoviePage extends Component<IProps, IState> {
 							Trailer
 						</Button>
 					</a>
-						<Link className="movieLink_booking" to={{pathname: (this.state.movie?.id!==undefined ? 
-							`/booking/${this.state.movie?.id}/${this.state.selected_date}` : '/')}}>
+						{/*<Link className="movieLink_booking" to={{pathname: (this.state.movie?.id!==undefined ? */}
+						{/*	`/booking/${this.state.movie?.id}/${this.state.selected_date}` : '/')}}>*/}
+						<Link className="movieLink_booking" to={{pathname: "/booking"}} >
 						<Button className="movieDetails_btn" variant="contained">
 							Book
 						</Button>

@@ -2,6 +2,7 @@ import axios from "axios";
 import Cinema from "../Models/Cinema";
 import Customer from "../Models/Customer";
 import Token from "../Models/Token";
+import Screenings from "../Models/Screenings";
 
 export default class ApiService {
     token?: Token;
@@ -63,9 +64,11 @@ export default class ApiService {
     }
 
     getAllCinemas(): Promise<Cinema[]> {
-        
         return axiosInstance.get<Cinema[]>("/cinema").then(res => res.data).catch(err => err);
+    }
 
+    getScreenings(id: number): Promise<Screenings[]> {
+        return axiosInstance.get<Screenings[]>(`/screening/movie/${id}`).then(res => res.data).catch(err => err);
     }
 }
 

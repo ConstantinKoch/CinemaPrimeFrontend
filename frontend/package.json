@@ -26,6 +26,8 @@
     "react-read-more-less": "^0.1.6",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
+    "react-seat-picker": "^1.5.3",
+    "react-seatmap": "^0.1.2",
     "react-select": "^3.2.0",
     "react-show-more-text": "^1.4.6",
     "react-truncate": "^2.4.0",

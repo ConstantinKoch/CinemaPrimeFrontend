@@ -7,6 +7,7 @@ import LandingPage from './Body/LandingPage/LandingPage';
 import MovieView from './Body/MovieView/MovieView';
 import Cart from './Body/Cart/Cart';
 import SeatPage from './Body/SeatPage/SeatPage';
+
 import Checkout from './Body/Checkout/Checkout';
 import ScrollToTop from './Body/ScrollToTop';
 //change to LoginRegister

@@ -1,0 +1,19 @@
+.table{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    align-content: center;
+    align-self: center;
+}
+
+.seat_container{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    align-content: center;
+    align-self: center;
+}
+
+.row{
+    margin-left: 10px;
+}
