@@ -1,6 +1,13 @@
-.aboutus_div {
-	margin: 9em;
-	margin-top: 2em;
+.aboutus_text {
+    border-radius: 10px;
+    background-color: #c9d2da67;
+    margin: 0px auto;
+    width: 90%;
+	padding: 1.5em;
+	max-width: 1000px;
+	
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(197, 192, 192, 0.2),0 6px 20px 0 rgba(197, 192, 192, 0.2);
 }
 
 .standardParagraph {
@@ -26,27 +33,28 @@
 
 .thirteenthParagraph {
 	border: 1px solid #000000;
-	margin: 15em;
+	max-width: 750px;
+	margin: 0 auto;
 	margin-top: 5px;
 	margin-bottom: 20px;
 
 	padding: 10px;
 }
 .fourteenthParagraph {
-	margin-left: 20px;
 	margin-top: 20px;
+	font-weight: bold;
 }
 .fifteenthParagraph {
-	border: 1px solid #000000;
-	margin: 15em;
-	margin-top: 5px;
+	margin: 0 auto;	margin-top: 5px;
 	margin-bottom: 20px;
 	padding: 10px;
+	font-weight: bold;
+
 }
 .sixteenthParagraph {
 	border: 1px solid #000000;
-	margin: 15em;
-	margin-top: 5px;
+	max-width: 750px;
+	margin: 0 auto;	margin-top: 5px;
 	margin-bottom: 20px;
 	padding: 10px;
 }

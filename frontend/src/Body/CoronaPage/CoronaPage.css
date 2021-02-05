@@ -1,9 +1,4 @@
-.heading-about-side {
-    font-size: 50px;
-    margin-top: 10px;
-}
-
-.content-text {
+.corona_content-text {
     width: 100%;
     height: 20%;
     margin-top: 50px;
@@ -11,30 +6,13 @@
     line-height: 27px;
 }
 
-.content-text-popcorn {
-    width: 100%;
-    height: 20%;
-    margin-top: 17%;
-}
-
-h1 {
-    color: black;
-}
-
-.text {
+.corona_text {
     border-radius: 10px;
-    padding: 40px;
     background-color: #c9d2da67;
     margin: 0px auto;
-    width: 60%;
-    left: 50%;
-    right: 50%;
-    text-align: left;
+    width: 70%;
+	padding: 1.5em;
+	max-width: 1000px;
+	
     box-shadow: 0 4px 8px 0 rgba(197, 192, 192, 0.2),0 6px 20px 0 rgba(197, 192, 192, 0.2);
 }
-
-.popcorn-image {
-    margin-top: 5px;
-    margin-left: 25%;
-}
-

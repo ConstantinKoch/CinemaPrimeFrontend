@@ -10,6 +10,8 @@ export default class AboutUs extends React.Component {
 
 	render() {
 		return (
+            <div className="content-text">
+                <div className="aboutus_text">
 			<div className="aboutus_div">
                 <h2> Allgemeine Geschäftsbedingungen der Firma Cinema Prime </h2> <br /> <br />
                 <p className="standardParagraph" >§1 Geltung gegenüber Unternehmern und Begriffsdefinitionen</p>
@@ -206,6 +208,8 @@ export default class AboutUs extends React.Component {
                 <p>Stand der AGB Jan.2021</p>
 
                 <p><i><a href="http://www.agb.de">Gratis AGB</a> erstellt von agb.de</i></p>
+            </div>
+            </div>
             </div>
 		);
 	}
