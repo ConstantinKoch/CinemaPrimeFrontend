@@ -7,6 +7,9 @@ import LandingPage from './Body/LandingPage/LandingPage';
 import MovieView from './Body/MovieView/MovieView';
 import Cart from './Body/Cart/Cart';
 import SeatPage from './Body/SeatPage/SeatPage';
+import CoronaPage from './Body/CoronaPage/CoronaPage';
+import FAQ from './Body/FAQ/FAQ';
+
 
 import Checkout from './Body/Checkout/Checkout';
 import ScrollToTop from './Body/ScrollToTop';
@@ -31,7 +34,10 @@ function App() {
 					<Route path="/checkout" exact component={Checkout} />
 					<Route path="/register" exact component={LoginRegister} />
 					<Route path="/aboutus" exact component={AboutUs} />
-					<Route path="/booking" exact component={SeatPage} />
+					<Route path="/booking" component={SeatPage} />
+					<Route path="/corona" exact component={CoronaPage} />
+					<Route path="/faq" exact component={FAQ} />
+
 					<Route path="/" exact component={LandingPage} />
 				</Switch>
 				<Footer />

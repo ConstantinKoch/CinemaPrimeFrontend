@@ -71,8 +71,8 @@ export default class SeatPage extends Component<IProps, IState> {
 		<Grid
 				container
 				className="contactform_map"
-				justify="center"
-				spacing={0}
+				justify="flex-start"
+				spacing={1}
 				alignItems="flex-start"
 				direction="row"
 			>

@@ -94,7 +94,7 @@ export default class DetailMoviePage extends Component<IProps, IState> {
 			this.state.finished_rendering ? (
 			<Grid
 			container
-			className="contactform_map"
+			className="movieDetails_div"
 			justify="center"
 			spacing={0}
 			alignItems="flex-start"
@@ -111,15 +111,16 @@ export default class DetailMoviePage extends Component<IProps, IState> {
 				</div>
 			</Grid>
 
-			<Grid item xs={12} sm={12} md={6} lg={6}>
+			<Grid item className="movieDetails_info_btns" xs={12} sm={12} md={6} lg={6}>
 
 				<div className="movieDetails_info_div">
                     <div className="movieDetails_title">{this.state.movie?.title}</div>
 					
 					<ReadMoreAndLess
+					className="readMoreContent"
 					charLimit={250} readMoreText="show more" readLessText="show less"
 					readMoreClassName="movieDetails_overview" readLessClassName="movieDetails_overview"
-					style={{lineHeight: 24, fontSize: 16, color: "blue"}} readLessStyle={{lineHeight: 24, fontSize: 16}}>
+					style={{lineHeight: 24, fontSize: 20, color: "blue"}} readLessStyle={{lineHeight: 24, fontSize: 16}}>
 						{this.state.movie?.overview}
 					</ReadMoreAndLess>
 				</div>
@@ -158,7 +159,7 @@ export default class DetailMoviePage extends Component<IProps, IState> {
 					</div>
             </Grid>
 		</Grid>
-			): (<div>Test</div>)
+			): (<div className="holder_div"></div>)
 		);
 	}
 }

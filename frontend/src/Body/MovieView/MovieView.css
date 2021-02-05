@@ -1,4 +1,19 @@
 .gridView {
 	padding: 4rem 4rem 4rem 4rem;
 	padding-left: 5rem;
+	animation: fadein 1s;
+
+}
+
+.react_loading{
+	margin: 0 auto;
+}
+
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
 }

@@ -47,12 +47,12 @@ function Footer() {
 			<div className="footer-links">
 				<div className="footer-link-items">
 					<Link to="/aboutus">
-						<h2>About Us</h2>
+						<h4>About Us</h4>
 					</Link>
 				</div>
 				<div className="footer-link-items">
-					<Link to="/contact">
-						<h2>Contact</h2>
+					<Link to="/faq">
+						<h4>FAQ</h4>
 					</Link>
 				</div>
 			</div>

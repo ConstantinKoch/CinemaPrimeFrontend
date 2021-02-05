@@ -76,6 +76,7 @@
 
 .movieLink:hover {
 	transform: scale(1.05);
+	text-decoration: none;
 }
 
 .movieImg {
@@ -97,6 +98,7 @@
 	text-align: center;
 	margin-top: 162%;
 	padding: 10px 10px 10px 10px;
+	text-decoration: none;
 }
 
 .movieTitle {
@@ -107,6 +109,7 @@
 	text-decoration: none;
 	font-size: 24px;
 	font-weight: bold;
+	text-decoration: none;
 }
 
 .overview {

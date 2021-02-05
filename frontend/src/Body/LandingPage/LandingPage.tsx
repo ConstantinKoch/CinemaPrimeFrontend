@@ -8,7 +8,7 @@ function HeroSection() {
 		<div className="hero-container">
 			<h1> CINEMA PRIME</h1>
 			<p> What are you waiting for?</p>
-			<div className="landing-btns">
+			{/*<div className="landing-btns">
 				<Link className="landing-link-program" to="/program">
 					<Button className="landing-btn-program" variant="contained">
 						Program
@@ -20,7 +20,7 @@ function HeroSection() {
 						Contact
 					</Button>
 				</Link>
-			</div>
+	</div>*/}
 		</div>
 	);
 }

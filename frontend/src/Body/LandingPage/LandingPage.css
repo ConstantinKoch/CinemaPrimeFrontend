@@ -15,6 +15,7 @@
 .hero-container > h1 {
 	color: #fff;
 	font-size: 100px;
+	font-weight: bold;
 	margin-top: -100px;
 }
 
@@ -29,20 +30,28 @@
 	margin-top: 50px;
 }
 
+.landing-btns{
+	text-decoration: none;
+}
+
 .landing-btns .btn {
 	margin: 6px;
 }
 
-.landing-link-program {
+.landing-link-program:hover {
 	text-decoration: none;
 }
 
-.landing-link-contact {
+.landing-link-contact:hover {
 	text-decoration: none;
 }
 
 .fa-play-circle {
 	margin-left: 4px;
+}
+
+Button:hover{
+	text-decoration: none !important;
 }
 
 @media screen and (max-width: 960px) {

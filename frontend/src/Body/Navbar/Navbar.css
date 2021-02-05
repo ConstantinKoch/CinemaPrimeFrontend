@@ -8,6 +8,7 @@
 	position: sticky;
 	top: 0;
 	z-index: 999;
+	text-decoration: none;
 }
 
 .navbar-container {
@@ -22,11 +23,20 @@
 	color: #fff;
 	justify-self: start;
 	margin-left: 20px;
+	margin-bottom: 15px;
 	cursor: pointer;
 	text-decoration: none;
 	font-size: 2rem;
 	display: flex;
 	align-items: center;
+
+}
+
+.navbar-logo:hover{
+	color: #fff;
+	text-decoration: none;
+	color: #929292;
+	transition: 0.3s ease-out;
 }
 
 .fa-typo3 {
@@ -36,7 +46,7 @@
 
 .nav-menu {
 	display: grid;
-	grid-template-columns: repeat(4, auto);
+	grid-template-columns: repeat(5, auto);
 	grid-gap: 10px;
 	list-style: none;
 	text-align: center;
@@ -47,6 +57,7 @@
 
 .nav-item {
 	height: 80px;
+	text-decoration: none;
 }
 
 .nav-links {
@@ -56,11 +67,14 @@
 	text-decoration: none;
 	padding: 0.5rem 1rem;
 	height: 100%;
+	text-decoration: none;
 }
 
 .nav-links:hover {
 	border-bottom: 4px solid #fff;
-	transition: all 0.2s ease-out;
+	text-decoration: none;
+	color: #929292;
+	transition: 0.3s ease-out;
 }
 
 .nav-item-register {
@@ -73,8 +87,14 @@
 	align-items: center;
 	justify-content: center;
 	text-decoration: none;
-	padding-top: 28px;
+	padding-top: 25px;
 	height: 40px;
+}
+
+.nav-links-register:hover{
+	text-decoration: none;
+	color: #929292;
+	transition: 0.2s ease-out;
 }
 
 .nav-btn-register {
@@ -138,6 +158,9 @@
 		background-color: #fff;
 		color: #242424;
 		border-radius: 0;
+		text-decoration: none;
+	color: #929292;
+	transition: 0.3s ease-out;
 	}
 
 	.nav-links-register {
@@ -153,11 +176,9 @@
 		border-radius: 0;
 	}
 
-	.navbar-logo {
-		position: absolute;
-		top: 0;
-		left: 0;
-		transform: translate(25%, 50%);
+	.navbar-logo:hover{
+		color: #fff;
+		text-decoration: none;
 	}
 
 	.menu-icon {
