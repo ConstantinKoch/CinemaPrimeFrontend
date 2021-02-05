@@ -1,8 +1,8 @@
 import React from 'react';
-import './AboutUs.css';
+import './AGB.css';
 //import LandingPage from './LandingPage/LandingPage';
 
-export default class AboutUs extends React.Component {
+export default class AGB extends React.Component {
 
     componentDidMount() {
         window.scrollTo(0, 0);
@@ -10,7 +10,9 @@ export default class AboutUs extends React.Component {
 
 	render() {
 		return (
-            <div className="content-text">
+            
+
+            <div className="aboutus_content-text">
                 <div className="aboutus_text">
 			<div className="aboutus_div">
                 <h2> Allgemeine Geschäftsbedingungen der Firma Cinema Prime </h2> <br /> <br />
@@ -86,7 +88,7 @@ export default class AboutUs extends React.Component {
                 <p className="standardParagraph">§5 Eigentumsvorbehalt</p>
                 Wir behalten uns das Eigentum an der Ware bis zur vollständigen Bezahlung des Kaufpreises vor. <br />
                             <br />
-                ****************************************************************************************************
+                ************************************************
                 <br />
                 <p className="standardParagraph">§6 Widerrufsrecht des Kunden als Verbraucher
                 </p> <b>
@@ -135,7 +137,7 @@ export default class AboutUs extends React.Component {
                     <b>Ende der Widerrufsbelehrung</b>
                 <br />
                 <br />
-                ****************************************************************************************************
+                ************************************************
                 <br />
                 <br />
 

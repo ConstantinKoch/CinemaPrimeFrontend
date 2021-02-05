@@ -7,7 +7,6 @@ function HeroSection() {
 	return (
 		<div className="hero-container">
 			<h1> CINEMA PRIME</h1>
-			<p> What are you waiting for?</p>
 			{/*<div className="landing-btns">
 				<Link className="landing-link-program" to="/program">
 					<Button className="landing-btn-program" variant="contained">

@@ -5,10 +5,10 @@ import Button from '@material-ui/core/Button';
 import { Grid } from '@material-ui/core';
 
 const ContactForm = () => {
-	const [ status, setStatus ] = useState('Submit');
+	const [ status, setStatus ] = useState('Senden');
 	const handleSubmit = async (e: any) => {
 		e.preventDefault();
-		setStatus('Sending...');
+		setStatus('Gesendet');
 		const { name, email, message } = e.target.elements;
 		let details = {
 			name: name.value,
@@ -27,18 +27,21 @@ const ContactForm = () => {
 		alert(result.status);
 	};
 	return (
+
+		<div className="contact_content-text">
+        <div className="contact_text">
 		<Grid
 			container
 			className="contactform_map"
 			justify="center"
-			spacing={0}
+			spacing={4}
 			alignItems="flex-start"
 			direction="row"
 		>
 			<Grid item xs={12} sm={12} md={6} lg={6}>
-				<p>Kontakt:</p>
-				<div className="container">
-					<form onSubmit={handleSubmit}>
+				<h5 style={{fontWeight:'bold'}}>Kontaktieren Sie uns:</h5>
+				<div className="container" style={{backgroundColor: 'transparent'}}>
+					<form onSubmit={handleSubmit} >
 						<div className="nameField">
 							<div id="nameText">Name:</div>
 							<input type="text" id="name" required />
@@ -48,7 +51,7 @@ const ContactForm = () => {
 							<input type="email" id="email" required />
 						</div>
 						<div className="messageField">
-							<div id="messageText">Message:</div>
+							<div id="messageText">Nachricht:</div>
 							<textarea id="message" required />
 						</div>
 						<Button className="input" type="submit" id="submitButton" variant="contained">
@@ -58,12 +61,16 @@ const ContactForm = () => {
 				</div>
 			</Grid>
 			<Grid item xs={12} sm={12} md={6} lg={6}>
-				<div className="map_div">
-					<p>Adresse:</p>
-					<MapContainer className="map" />
+				<div  className="map_div">
+				<h5 style={{fontWeight:'bold'}}>So kommen Sie zu uns:</h5>
+					<div>
+						<MapContainer  className="map" />
+					</div>
 				</div>
 			</Grid>
 		</Grid>
+		</div>
+		</div>
 	);
 };
 

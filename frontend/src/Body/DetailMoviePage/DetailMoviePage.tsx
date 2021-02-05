@@ -124,21 +124,6 @@ export default class DetailMoviePage extends Component<IProps, IState> {
 						{this.state.movie?.overview}
 					</ReadMoreAndLess>
 				</div>
-					{/*<Select
-						className="movieDetails_select"
-						classNamePrefix="select"
-						isDisabled={false}
-						isLoading={false}
-						isClearable={false}
-						isRtl={false}
-						//defaultValue={{ label: "Select Date", value: "test" }}	
-						isSearchable={false}
-						value={{label: this.state.selected_date, value: this.state.selected_label}}
-						name="color"
-						options={options}
-						onChange={this.handleChange}
-        			/>*/}
-
 					<select value={this.state.selected_date} onChange={this.handleChange} className="movieDetails_select_new">
 						{this.state.screenings?.map((Screening) => (
 							<option value={Screening.id}>{Screening.date} {Screening.time}</option>))}

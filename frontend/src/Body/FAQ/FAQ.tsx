@@ -7,6 +7,8 @@ export default class FAQ extends Component{
 
     render(){
         return (
+            <div className="faq_content-text">
+                <div className="faq_text">
             <div className="FAQs">
                 <h1 className="FAQs_heading">Häufig gestellte Fragen</h1>
             <div className="FAQs_accordion-wrapper">
@@ -54,6 +56,8 @@ export default class FAQ extends Component{
                         </Accordion.Collapse>
                     </Card>
                 </Accordion>
+            </div>
+            </div>
             </div>
             </div>
         )

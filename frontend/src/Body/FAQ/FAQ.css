@@ -1,31 +1,49 @@
-.FAQs{
-    width: 65%;
-    max-width: 700px;
-    margin: 0 auto;
-    margin-bottom: 50px;
+.FAQs {
+  width: 65%;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
-.FAQs_heading{
-    margin-top: 1em;
-    margin-bottom: 0.5em;
+.faq_content-text {
+  width: 100%;
+  height: 20%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  line-height: 27px;
+}
+
+.faq_text {
+  border-radius: 10px;
+  background-color: #c9d2da67;
+  margin: 0px auto;
+  width: 90%;
+  padding: 1.5em;
+  max-width: 1000px;
+
+  box-shadow: 0 4px 8px 0 rgba(197, 192, 192, 0.2),
+    0 6px 20px 0 rgba(197, 192, 192, 0.2);
+}
+
+.FAQs_heading {
+  margin-bottom: 0.5em;
 }
 
 .heading-faq-side {
-    font-size: 50px;
-    margin-top: 30px;
+  font-size: 50px;
+  margin-top: 30px;
 }
 
-.accordion-card{
-    cursor: pointer;
+.accordion-card {
+  cursor: pointer;
 }
 
 .accordion-wrapper {
-    margin-top: 5%;
-    display: flex;
-    justify-content: center;
+  margin-top: 5%;
+  display: flex;
+  justify-content: center;
 }
 
 .card-body {
-    background-color:lightgray;
-    cursor: default;
+  background-color: lightgray;
+  cursor: default;
 }

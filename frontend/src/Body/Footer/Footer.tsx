@@ -10,14 +10,14 @@ function Footer() {
 		<div className="footer-container">
 			<section className="footer-subscription">
 				<p className="footer-subscription-heading">
-					Join our CinemaPrime newsletter to receive exclusive deals!
+					Abonnieren Sie unseren Newsletter, um keine Neuigkeiten zu verpassen!
 				</p>
 				{/*<p className="footer-subscription-text">You can unsubscribe at any time.</p>*/}
 				<div className="input-area">
 					<input
 						type="email"
 						name="email"
-						placeholder="Your Email"
+						placeholder="E-Mail-Adresse"
 						className="footer-input"
 						//placeholderTextColor="white"
 					/>
@@ -40,14 +40,20 @@ function Footer() {
 					/>*/}
 					&nbsp; &nbsp;
 					<div className="footer-button">
-						<Button variant="contained">Subscribe</Button>
+						<Button variant="contained">Abonnieren</Button>
 					</div>
 				</div>
 			</section>
-			<div className="footer-links">
+			<section className="footer-links">
+			<div className="link-wrap">
 				<div className="footer-link-items">
-					<Link to="/aboutus">
-						<h4>About Us</h4>
+					<Link to="/impressum">
+						<h4>Impressum</h4>
+					</Link>
+				</div>
+				<div className="footer-link-items">
+					<Link to="/agb">
+						<h4>AGB</h4>
 					</Link>
 				</div>
 				<div className="footer-link-items">
@@ -56,6 +62,7 @@ function Footer() {
 					</Link>
 				</div>
 			</div>
+			</section>
 			<section className="social-media">
 				<div className="social-media-wrap">
 					<div className="footer-logo">
