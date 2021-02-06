@@ -74,12 +74,17 @@
 .footer-link-items a {
   color: #fff;
   text-decoration: none;
+  margin: 0 auto;
 }
 
 .footer-link-items a:hover {
   text-decoration: none;
   color: #929292;
   transition: 0.3s ease-out;
+}
+
+.footer-link-items h4 {
+  max-width: 150px;
 }
 
 .social-media {
@@ -98,7 +103,7 @@
 
 .link-wrap {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   width: 90%;
   max-width: 1000px;

@@ -20,13 +20,13 @@ export default class InformationPage extends Component{
             <div className="informationen_div">
                 <div className="info_content-text">
                 <div className="info_text">
-                        <h5><strong>Öffnungszeiten:</strong></h5>
+                        <h2>Öffnungszeiten:</h2>
                         <p>
 So - Do: 16:00 - 22:30 <br></br>
                         Fr - Sa: 15:00 - 24:00</p>
                         <br></br>
-                        <h5>
-                        <strong>Ticketpreise:</strong></h5>
+                        <h2>
+                        Ticketpreise:</h2>
                         <TableContainer className="price_table" component={Paper}>
       <Table  aria-label="simple table">
         <TableHead>
@@ -66,7 +66,7 @@ So - Do: 16:00 - 22:30 <br></br>
 
             <div className="corona_content-text">
                 <div className="corona_text">
-                    <h2 style={{fontWeight:'bold'}}>Corona News</h2>
+                    <h2 >Corona News</h2>
                     <p>
                         Liebe CinemaPrime Gäste,<br></br>
                         seit den ersten Nachrichten über den Ausbruch von COVID-19 („Coronavirus“) haben wir 

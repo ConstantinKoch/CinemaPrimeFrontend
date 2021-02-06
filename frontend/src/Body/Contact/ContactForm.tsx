@@ -28,19 +28,21 @@ const ContactForm = () => {
 	};
 	return (
 
-		<div className="contact_content-text">
-        <div className="contact_text">
+		
 		<Grid
 			container
 			className="contactform_map"
 			justify="center"
-			spacing={4}
+			spacing={0}
 			alignItems="flex-start"
 			direction="row"
 		>
-			<Grid item xs={12} sm={12} md={6} lg={6}>
+						<Grid item xs={12} sm={12} md={6} lg={6}>
+
+			<div className="contact_content-text">
+        <div className="contact_text">
 				<h5 style={{fontWeight:'bold'}}>Kontaktieren Sie uns:</h5>
-				<div className="container" style={{backgroundColor: 'transparent'}}>
+				<div className="contact_container" style={{backgroundColor: 'transparent'}}>
 					<form onSubmit={handleSubmit} >
 						<div className="nameField">
 							<div id="nameText">Name:</div>
@@ -48,7 +50,7 @@ const ContactForm = () => {
 						</div>
 						<div className="emailField">
 							<div id="emailText">Email:</div>
-							<input type="email" id="email" required />
+							<input type="email" id="contact_email" required />
 						</div>
 						<div className="messageField">
 							<div id="messageText">Nachricht:</div>
@@ -59,18 +61,26 @@ const ContactForm = () => {
 						</Button>
 					</form>
 				</div>
+
+			</div>
+			</div>
 			</Grid>
 			<Grid item xs={12} sm={12} md={6} lg={6}>
+
+			<div className="contact_content-text">
+        <div className="contact_text">
 				<div  className="map_div">
 				<h5 style={{fontWeight:'bold'}}>So kommen Sie zu uns:</h5>
 					<div>
 						<MapContainer  className="map" />
 					</div>
 				</div>
-			</Grid>
+		</div>
+		</div>
 		</Grid>
-		</div>
-		</div>
+
+		</Grid>
+
 	);
 };
 

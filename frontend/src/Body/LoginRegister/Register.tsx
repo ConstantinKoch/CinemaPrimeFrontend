@@ -1,16 +1,18 @@
 import React, {useState} from 'react';
 import '../../App.css';
 import './LoginRegister.css';
+import { Link } from 'react-router-dom';
+
 import Customer from "../../Models/Customer";
 import Button from '@material-ui/core/Button';
 import {Grid} from "@material-ui/core";
 import ApiService from "../../Services/ApiService";
 
 const RegisterForm = () => {
-    const [ status, setStatus ] = useState('Submit');
+    const [ status, setStatus ] = useState('Registrieren');
     const handleRegister = async (e: any) => {
         e.preventDefault();
-        setStatus('Sending...');
+        setStatus('registriert...');
         const { email, password } = e.target.elements;
         let details = {
             email: email.value,
@@ -23,6 +25,9 @@ const RegisterForm = () => {
         }
     };
     return (
+<div className="register_content-text">
+                <div className="register_text">
+
         <Grid
             container
             className="registerForm"
@@ -32,8 +37,8 @@ const RegisterForm = () => {
             direction="row"
         >
             <Grid item xs={12} sm={12} md={6} lg={6}>
-                <p>Registration:</p>
-                <div className="container">
+                <h1>Registration</h1>
+                <div className="register_container">
                     <form onSubmit={handleRegister}>
                         <div className="names">
                             <div className="vornameField">
@@ -50,13 +55,14 @@ const RegisterForm = () => {
                             <input type="email" id="email" required />
                         </div>
                         <div className="passwordField">
-                            <div id="passwordText">Password:</div>
+                            <div id="passwordText">Passwort:</div>
                             <input type="password" id="password" required />
                         </div>
                         <div className="passwordRepeatField">
                             <div id="passwordRepeatText">Passwort Wiederholen:</div>
                             <input type="password" id="passwordRepeat" required />
                         </div>
+                        <p>mit der Registrierung akzeptieren Sie unsere <Link to="/AGB">AGB</Link></p>
                         <Button className="input" type="submit" id="submitButton" variant="contained">
                             {status}
                         </Button>
@@ -64,6 +70,8 @@ const RegisterForm = () => {
                 </div>
             </Grid>
         </Grid>
+        </div>
+        </div>
     );
 };
 

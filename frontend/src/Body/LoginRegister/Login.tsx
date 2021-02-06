@@ -22,6 +22,7 @@ const LoginForm = () => {
         }
     };
     return (
+        
         <Grid
             container
             className="loginForm"
@@ -39,7 +40,7 @@ const LoginForm = () => {
                             <input type="email" id="email" required />
                         </div>
                         <div className="passwordField">
-                            <div id="passwordText">Password:</div>
+                            <div id="passwordText">Passwort:</div>
                             <input type="password" id="password" required />
                         </div>
                         <Button className="input" type="submit" id="submitButton" variant="contained">
