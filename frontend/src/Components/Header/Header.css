@@ -1,0 +1,39 @@
+.logo {
+    padding-left: 20px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.logoInner {
+    text-align: left;
+    font-size: 30px;
+    color: white;
+    text-decoration: none;
+}
+
+header {
+    padding-top: 0;
+    background-color: darkslateblue;
+    height: 75px;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.prime {
+    color: #FFFF00;
+    display: inline;
+}
+
+.iconLink {
+    font-size: 30px;
+    color: white;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.iconLink:hover {
+    color: #FFFF00;
+}
