@@ -8,10 +8,7 @@ import { Grid } from '@material-ui/core';
 import Button from '@material-ui/core/Button';
 import { Link } from 'react-router-dom';
 import YTSearch from 'youtube-api-search';
-/*import ReadMoreReact from 'read-more-react';
-import ReactShowMore from 'react-show-more';
-import Select from 'react-select';*/
-
+//bringt keinen Fehler, alles gut
 import ReadMoreAndLess from 'react-read-more-less';
 import ApiService from '../../Services/ApiService';
 import Screenings from "../../Models/Screenings";
@@ -39,13 +36,13 @@ interface IState {
 	screenings?: Screenings[];
 }
 
-const options = [
+{/*const options = [
 	{ value: '11.01.21 12:00', label: '11.01.21 12:00' },
 	{ value: '12.01.21 12:00', label: '12.01.21 12:00' },
 	{ value: '13.01.21 12:00', label: '13.01.21 12:00' },
 	{ value: '14.01.21 12:00', label: '14.01.21 12:00' } 
   ];
-
+*/}
 export default class DetailMoviePage extends Component<IProps, IState> {
 	state:IState = ({finished_rendering: false, url : window.location.href, selected_date : '11.01.20_18:00', selected_label: 'test'})
 	
@@ -65,7 +62,7 @@ export default class DetailMoviePage extends Component<IProps, IState> {
 				//cinema_one : this.state.cinema_arr[0]})
 			this.setState({lastSegment : Number(this.state.url.split('/').pop())})
 			this.setState({movie : this.state.runningMovies?.filter(movie => movie.id === this.state.lastSegment).pop()})
-			ApiService.getInstance().getScreenings(this.state.movie?.id != undefined ? this.state.movie.id : 0).then(res => this.setState({ screenings: res}))
+			ApiService.getInstance().getScreenings(this.state.movie?.id !== undefined ? this.state.movie.id : 0).then(res => this.setState({ screenings: res}))
 
 			this.videoSearch()
 			this.setState({finished_rendering : true})})
@@ -122,10 +119,12 @@ export default class DetailMoviePage extends Component<IProps, IState> {
 						{this.state.movie?.overview}
 					</ReadMoreAndLess>
 				</div>
-					<select value={this.state.selected_date} onChange={this.handleChange} className="movieDetails_select_new">
-						{this.state.screenings?.map((Screening) => (
+				{//uncomment to see select 
+				}
+					{/*<select value={this.state.selected_date} onChange={this.handleChange} className="movieDetails_select_new">
+						{(this.state.screenings === null) ? (null) : {this.state.screenings?.map((Screening) => (
 							<option value={Screening.id}>{Screening.date} {Screening.time}</option>))}
-					</select>
+						</select>*/}
 					<div className="movieDetails_btns_div">
 					<a className="movieLink_trailer" target="_blank" rel="noreferrer" href={`https://www.youtube.com/watch?v=${this.state.displayVideo?.id.videoId}`}>
 						<Button className="movieDetails_btn_trailer" variant="contained">
