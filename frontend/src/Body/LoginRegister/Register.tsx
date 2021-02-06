@@ -37,7 +37,7 @@ const RegisterForm = () => {
             direction="row"
         >
             <Grid item xs={12} sm={12} md={6} lg={6}>
-                <h1>Registration</h1>
+                <h1>Registrierung</h1>
                 <div className="register_container">
                     <form onSubmit={handleRegister}>
                         <div className="names">

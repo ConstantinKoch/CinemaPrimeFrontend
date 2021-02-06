@@ -37,7 +37,6 @@ interface IState {
 	cinema_arr?: Cinema[];
 	cinema_one?: Cinema;
 	screenings?: Screenings[];
-
 }
 
 const options = [
@@ -48,13 +47,12 @@ const options = [
   ];
 
 export default class DetailMoviePage extends Component<IProps, IState> {
-	state:IState = ({finished_rendering: false, url : window.location.href, selected_date : '11_01_20', selected_label: 'test'})
+	state:IState = ({finished_rendering: false, url : window.location.href, selected_date : '11.01.20_18:00', selected_label: 'test'})
 	
 	constructor(IProps: IProps | Readonly<IProps>){
 		super(IProps);
 		this.handleChange = this.handleChange.bind(this);
 		this.videoSearch = this.videoSearch.bind(this);
-
 	}
 	componentDidMount() {
 		axios.get<Movie[]>('http://localhost:8080/tmdb/running/').then((res) => res.data)
@@ -134,9 +132,8 @@ export default class DetailMoviePage extends Component<IProps, IState> {
 							Trailer
 						</Button>
 					</a>
-						{/*<Link className="movieLink_booking" to={{pathname: (this.state.movie?.id!==undefined ? */}
-						{/*	`/booking/${this.state.movie?.id}/${this.state.selected_date}` : '/')}}>*/}
-						<Link className="movieLink_booking" to={{pathname: "/booking"}} >
+						<Link className="movieLink_booking" to={{pathname: (this.state.movie?.id!==undefined ?
+							`/booking/${this.state.movie?.id}/${this.state.selected_date}` : '/')}}>
 						<Button className="movieDetails_btn" variant="contained">
 							Book
 						</Button>

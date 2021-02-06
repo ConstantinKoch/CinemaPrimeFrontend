@@ -1,19 +1,42 @@
-.table{
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    align-content: center;
-    align-self: center;
+.table {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  align-content: center;
+  align-self: center;
+  width: 90%;
 }
 
-.seat_container{
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    align-content: center;
-    align-self: center;
+.seatpage_grid {
+  padding-top: 20px;
 }
 
-.row{
-    margin-left: 10px;
+.seat_container {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  align-content: center;
+  align-self: center;
+  width: 80%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.booking_img {
+  width: 250px;
+  height: 100%;
+  text-decoration: none;
+  margin-bottom: 10px;
+  border-radius: 15px;
+  overflow: hidden;
+  margin-bottom: 50px;
+}
+
+.booking_info_div {
+  text-align: center;
+  padding-right: 20%;
+  padding-left: 20%;
+  padding-top: 20px;
+  font-size: 18px;
+  line-height: 25px;
 }

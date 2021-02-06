@@ -2,26 +2,41 @@ import React, { Component } from 'react';
 import '../../App.css';
 import axios from 'axios';
 import Movie from '../../Models/Movie';
-import Seatmap from 'react-seatmap';
-import SeatPicker from 'react-seat-picker'
 import './SeatPage.css';
-import Cinema from '../../Models/Cinema';
 import { Grid, Paper } from '@material-ui/core';
-import Button from '@material-ui/core/Button';
-import { Link } from 'react-router-dom';
+import ApiService from '../../Services/ApiService';
+
 
 interface IProps {}
 
 interface IState {
-	url?: String;
+	runningMovies?: Movie[];
+	lastSegment?: number;
+	url: String;
 	movie?: Movie;
 	loading: boolean;
+	selected_date: string;
 }
 
-
-
 export default class SeatPage extends Component<IProps, IState> {
-	state: IState = {loading: false};
+	state: IState = {url: window.location.href, loading: false, selected_date: ""};
+
+	constructor(IProps: IProps | Readonly<IProps>){
+		super(IProps);
+	}
+
+	componentDidMount() {
+		axios.get<Movie[]>('http://localhost:8080/tmdb/running/').then((res) => res.data)
+		.then((result) => {
+			this.setState({
+				runningMovies: result
+			});
+		}).then((): void => {
+			this.setState({lastSegment : Number(this.state.url.split('/')[4]), selected_date: this.state.url.split('/')[5].replace("_"," ")})
+			console.log(this.state.lastSegment + this.state.selected_date)
+			this.setState({movie : this.state.runningMovies?.filter(movie => movie.id === this.state.lastSegment).pop()})
+		})
+	}
 
 	FormRow() {
 		return (
@@ -48,14 +63,7 @@ export default class SeatPage extends Component<IProps, IState> {
 		);
 	}
 
-
-
 	matrix = new Array(10).fill(0).map(() => new Array(10).fill(0));
-
-	handleSeatClick() {
-		alert("Your file is being uploaded!")
-
-	}
 
 	render() {
 
@@ -66,29 +74,43 @@ export default class SeatPage extends Component<IProps, IState> {
 			[{ number: 1 }, {number: 2}, {number: 3}, null, {number: '4'}, {number: 5}, {number: 6}],
 			[{ number: 1, isReserved: true }, {number: 2}, {number: '3', isReserved: true}, null, {number: '4'}, {number: 5}, {number: 6, isReserved: true}]
 		];
+
 		return (
 
 		<Grid
 				container
-				className="contactform_map"
+				className="seatpage_grid"
 				justify="flex-start"
-				spacing={1}
+				spacing={0}
 				alignItems="flex-start"
 				direction="row"
 			>
+				
 				<Grid item xs={12} sm={12} md={6} lg={6}>
-					<p>Sitzauswahl:</p>
+					<div className="info_div">
+                    <div className="movieDetails_title">{this.state.movie?.title}</div>
+					<p>{this.state.selected_date}</p>
+
+						<div className="booking_img_div">
+
+				<img    className="booking_img"
+						src={'https://image.tmdb.org/t/p/w500' + this.state.movie?.poster_path}
+						alt={this.state.movie?.title + ' Movie Poster'}/>
+				</div>
+
+
+					</div>
+				</Grid>
+				
+				<Grid className="seat_container_grid" item xs={12} sm={12} md={6} lg={6}>
+					<h3>Sitzauswahl:</h3>
 					<div className="seat_container">
-
-						{//<Seatmap rows={rows} maxReservableSeats={3} alpha />
-						}
-
 						<table className="table">
 							<tbody>
 							{this.matrix.slice(1, this.matrix.length).map((row, seats) => {
 								return(
 									<tr>
-										<td onClick={this.handleSeatClick}>{row[0]}</td>
+										<td>{row[0]}</td>
 										<td className="row">{row[1]}</td>
 										<td>{row[2]}</td>
 										<td>{row[3]}</td>
@@ -106,13 +128,7 @@ export default class SeatPage extends Component<IProps, IState> {
 						</table>
 					</div>
 				</Grid>
-				<Grid item xs={12} sm={12} md={6} lg={6}>
-					<div className="info_div">
-						<p> Infos: </p>
-
-
-					</div>
-				</Grid>
+					
 			</Grid>
 		);
 	}
