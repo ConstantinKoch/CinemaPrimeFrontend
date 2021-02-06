@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/cinemaprime/static/css/main.0a182fd4.chunk.css",
+    "main.js": "/cinemaprime/static/js/main.6eb01d07.chunk.js",
+    "main.js.map": "/cinemaprime/static/js/main.6eb01d07.chunk.js.map",
+    "runtime-main.js": "/cinemaprime/static/js/runtime-main.a8f01656.js",
+    "runtime-main.js.map": "/cinemaprime/static/js/runtime-main.a8f01656.js.map",
+    "static/css/2.150d169a.chunk.css": "/cinemaprime/static/css/2.150d169a.chunk.css",
+    "static/js/2.d7750838.chunk.js": "/cinemaprime/static/js/2.d7750838.chunk.js",
+    "static/js/2.d7750838.chunk.js.map": "/cinemaprime/static/js/2.d7750838.chunk.js.map",
+    "index.html": "/cinemaprime/index.html",
+    "static/css/2.150d169a.chunk.css.map": "/cinemaprime/static/css/2.150d169a.chunk.css.map",
+    "static/css/main.0a182fd4.chunk.css.map": "/cinemaprime/static/css/main.0a182fd4.chunk.css.map",
+    "static/js/2.d7750838.chunk.js.LICENSE.txt": "/cinemaprime/static/js/2.d7750838.chunk.js.LICENSE.txt",
+    "static/media/LandingPage.css": "/cinemaprime/static/media/img_cinema_saal.d9cbf739.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a8f01656.js",
+    "static/css/2.150d169a.chunk.css",
+    "static/js/2.d7750838.chunk.js",
+    "static/css/main.0a182fd4.chunk.css",
+    "static/js/main.6eb01d07.chunk.js"
+  ]
+}
