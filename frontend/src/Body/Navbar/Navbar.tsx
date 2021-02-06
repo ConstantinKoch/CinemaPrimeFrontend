@@ -58,7 +58,7 @@ function Navbar() {
 					{click ? (
 						<li>
 							<Link to="/register" className="nav-links" onClick={closeMobileMenu}>
-								Sign up
+								Registrieren
 							</Link>
 						</li>
 					) : (
@@ -70,7 +70,7 @@ function Navbar() {
 									variant={click ? 'text' : 'outlined'}
 									color="inherit"
 								>
-									Sign up
+									Registrieren
 								</Button>
 							</Link>
 						</li>

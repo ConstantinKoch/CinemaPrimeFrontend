@@ -35,6 +35,16 @@ const RegisterForm = () => {
                 <p>Registration:</p>
                 <div className="container">
                     <form onSubmit={handleRegister}>
+                        <div className="names">
+                            <div className="vornameField">
+                                <div id="vornameText">Vorname:</div>
+                                <input type="text" id="Vorname" required />
+                            </div>
+                            <div className="nachnameField">
+                                <div id="nachnameText">Nachname:</div>
+                                <input type="text" id="Nachname" required />
+                            </div>
+                        </div>
                         <div className="emailField">
                             <div id="emailText">Email:</div>
                             <input type="email" id="email" required />
@@ -42,6 +52,10 @@ const RegisterForm = () => {
                         <div className="passwordField">
                             <div id="passwordText">Password:</div>
                             <input type="password" id="password" required />
+                        </div>
+                        <div className="passwordRepeatField">
+                            <div id="passwordRepeatText">Passwort Wiederholen:</div>
+                            <input type="password" id="passwordRepeat" required />
                         </div>
                         <Button className="input" type="submit" id="submitButton" variant="contained">
                             {status}
