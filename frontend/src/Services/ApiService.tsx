@@ -73,7 +73,7 @@ export default class ApiService {
 }
 
 let axiosInstance = axios.create({
-    baseURL: "http://localhost:8080/",
+    baseURL: process.env.baseUrl,
     headers: {
         'Content-Type': 'application/json'
     }
