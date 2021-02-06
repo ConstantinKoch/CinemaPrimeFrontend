@@ -4,7 +4,7 @@ import axios from 'axios';
 import Movie from '../../Models/Movie';
 import './SeatPage.css';
 import { Grid, Paper } from '@material-ui/core';
-import ApiService from '../../Services/ApiService';
+//import ApiService from '../../Services/ApiService';
 
 
 interface IProps {}
@@ -20,10 +20,6 @@ interface IState {
 
 export default class SeatPage extends Component<IProps, IState> {
 	state: IState = {url: window.location.href, loading: false, selected_date: ""};
-
-	constructor(IProps: IProps | Readonly<IProps>){
-		super(IProps);
-	}
 
 	componentDidMount() {
 		axios.get<Movie[]>('http://localhost:8080/tmdb/running/').then((res) => res.data)
@@ -67,13 +63,13 @@ export default class SeatPage extends Component<IProps, IState> {
 
 	render() {
 
-		const rows = [
+		{/*const rows = [
 			[{ number: 1 }, {number: 2}, {number: '3', isReserved: true}, null, {number: '4'}, {number: 5}, {number: 6}],
 			[{ number: 1, isReserved: true }, {number: 2, isReserved: true}, {number: '3', isReserved: true}, null, {number: '4'}, {number: 5}, {number: 6}],
 			[{ number: 1 }, {number: 2}, {number: 3, isReserved: true}, null, {number: '4'}, {number: 5}, {number: 6}],
 			[{ number: 1 }, {number: 2}, {number: 3}, null, {number: '4'}, {number: 5}, {number: 6}],
 			[{ number: 1, isReserved: true }, {number: 2}, {number: '3', isReserved: true}, null, {number: '4'}, {number: 5}, {number: 6, isReserved: true}]
-		];
+		];*/}
 
 		return (
 
