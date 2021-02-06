@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import "./FAQ.css";
 import {Accordion, Card} from 'react-bootstrap';
-
+import { Link } from 'react-router-dom';
 
 export default class FAQ extends Component{
 
@@ -33,11 +33,12 @@ export default class FAQ extends Component{
                     </Card>
                     <Card className="accordion-card">
                         <Accordion.Toggle as={Card.Header} eventKey="2">
-                            Bieten Sie auch familienfreundliche Filme an?
+                            Wie komme ich zum CinemaPrime?
                         </Accordion.Toggle>
                         <Accordion.Collapse eventKey="2">
-                            <Card.Body className="card-body">Unser Kinoprogramm sind so gestaltet, 
-                            dass wir zu jeder Zeit Filme für alle Altersgruppen anbieten.</Card.Body>
+                            <Card.Body className="card-body">
+                                Informationen hierzu finden Sie unter <Link to={"/kontakt"}>Kontakt & Anfahrt</Link>
+                            </Card.Body>
                         </Accordion.Collapse>
                     </Card>
                     <Card className="accordion-card">
@@ -53,6 +54,25 @@ export default class FAQ extends Component{
                                 Um eine Buchung zu stornieren, müssen sie nur auf den <strong>"Stornieren"</strong>-Button 
                                 klicken und die Stornierung bestätigen. <br></br>
                             </Card.Body>
+                        </Accordion.Collapse>
+                    </Card>
+                    <Card className="accordion-card">
+                        <Accordion.Toggle as={Card.Header} eventKey="4">
+                        Wird das Popcorn frisch zubereitet?
+                        </Accordion.Toggle>
+                        <Accordion.Collapse eventKey="4">
+                            <Card.Body className="card-body">
+                            Ja, das Popcorn wird in unseren hauseigenen Küchen hergestellt.
+                            </Card.Body>
+                        </Accordion.Collapse>
+                    </Card>
+                    <Card className="accordion-card">
+                        <Accordion.Toggle as={Card.Header} eventKey="5">
+                        Ich habe etwas im Kino verloren/vergessen. An wen kann ich mich wenden?
+                        </Accordion.Toggle>
+                        <Accordion.Collapse eventKey="5">
+                            <Card.Body className="card-body">
+                            Bitte schreibe uns eine Nachricht über unser <Link to={"/kontakt"}>Kontaktformular</Link> oder frage direkt im Kino nach.                            </Card.Body>
                         </Accordion.Collapse>
                     </Card>
                 </Accordion>

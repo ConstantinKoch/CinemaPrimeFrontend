@@ -15,7 +15,7 @@ export default class AGB extends React.Component {
             <div className="aboutus_content-text">
                 <div className="aboutus_text">
 			<div className="aboutus_div">
-                <h2> Allgemeine Geschäftsbedingungen der Firma Cinema Prime </h2> <br /> <br />
+                <h1> Allgemeine Geschäftsbedingungen der Firma Cinema Prime </h1> <br /> <br />
                 <p className="standardParagraph" >§1 Geltung gegenüber Unternehmern und Begriffsdefinitionen</p>
                 (1) Die nachfolgenden Allgemeinen Geschäftbedingungen gelten für alle Lieferungen zwischen uns und einem Verbraucher
                 in ihrer zum Zeitpunkt der Bestellung gültigen Fassung.<br />
