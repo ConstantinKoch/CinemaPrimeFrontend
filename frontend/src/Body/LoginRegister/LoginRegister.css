@@ -8,10 +8,8 @@
 	flex-grow: 1;
 }
 
-input[type=text],
-input[type=password],
-textarea,
-input[type=email] {
+#Vorname, #Nachname, #email, #password, #passwordRepeat
+{
 	width: 100%;
 	padding: 12px;
 	border: 1px solid #ccc;
@@ -40,15 +38,21 @@ input[type=email] {
 	border-color: black;
 	background-color: #f2f2f2;
 	padding: 10px 15px;
-	width: 400px;
+	width: 500px;
 	margin-left: auto;
 	margin-right: auto;
 }
 
 #nameText,
 #passwordText,
+#passwordRepeatText,
+.emailField,
+.passwordField,
+.passwordRepeatField,
+.names,
 h4 {
 	text-align: justify;
+	width: 500px;
 }
 
 .p {
