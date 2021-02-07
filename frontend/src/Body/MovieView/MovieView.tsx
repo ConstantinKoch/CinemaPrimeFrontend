@@ -5,7 +5,7 @@ import MovieField from '../MovieField/MovieField';
 import './MovieView.css';
 import { Grid } from '@material-ui/core';
 import ReactLoading from 'react-loading';
-
+import ApiService from '../../Services/ApiService';
 
 interface IProps {}
 
@@ -20,7 +20,7 @@ export default class MovieView extends React.Component<IProps, IState> {
 	componentDidMount() {
 		setTimeout(() => {
 			
-		axios.get<Movie[]>('http://localhost:8080/tmdb/running/').then((res) => res.data).then((result) => {
+			ApiService.getInstance().getRunningMovies().then((result) => {
 			this.setState({
 				runningMovies: result,
 				isLoading : false

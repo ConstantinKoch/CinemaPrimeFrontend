@@ -52,7 +52,7 @@ export default class DetailMoviePage extends Component<IProps, IState> {
 		this.videoSearch = this.videoSearch.bind(this);
 	}
 	componentDidMount() {
-		axios.get<Movie[]>('http://localhost:8080/tmdb/running/').then((res) => res.data)
+		ApiService.getInstance().getRunningMovies()
 		.then((result) => {
 			this.setState({
 				runningMovies: result

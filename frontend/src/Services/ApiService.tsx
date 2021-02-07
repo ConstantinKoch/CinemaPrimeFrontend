@@ -3,6 +3,7 @@ import Cinema from "../Models/Cinema";
 import Customer from "../Models/Customer";
 import Token from "../Models/Token";
 import Screenings from "../Models/Screenings";
+import Movie from "../Models/Movie";
 
 export default class ApiService {
     token?: Token;
@@ -69,6 +70,10 @@ export default class ApiService {
 
     getScreenings(id: number): Promise<Screenings[]> {
         return axiosInstance.get<Screenings[]>(`/screening/movie/${id}`).then(res => res.data).catch(err => err);
+    }
+    
+    getRunningMovies(): Promise<Movie[]>{
+        return axiosInstance.get<Movie[]>('/tmdb/running/').then((res) => res.data)
     }
 }
 
