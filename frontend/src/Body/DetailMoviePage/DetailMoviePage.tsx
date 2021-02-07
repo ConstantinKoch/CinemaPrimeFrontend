@@ -134,7 +134,7 @@ export default class DetailMoviePage extends Component<IProps, IState> {
 						<Link className="movieLink_booking" to={{pathname: (this.state.movie?.id!==undefined ?
 							`/booking/${this.state.movie?.id}/${this.state.selected_date}` : '/')}}>
 						<Button className="movieDetails_btn" variant="contained">
-							Book
+							Buchen
 						</Button>
 						</Link>
 					</div>

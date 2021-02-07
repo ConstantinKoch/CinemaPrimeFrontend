@@ -46,14 +46,14 @@ function Footer() {
 			</section>
 			<section className="footer-links">
 			<div className="link-wrap">
-				<div className="footer-link-items">
-					<Link to="/impressum">
-						<h4>Impressum</h4>
+			<div className="footer-link-items">
+					<Link to="/agb">
+						<h4>AGB</h4>
 					</Link>
 				</div>
 				<div className="footer-link-items">
-					<Link to="/agb">
-						<h4>AGB</h4>
+					<Link to="/impressum">
+						<h4>Impressum</h4>
 					</Link>
 				</div>
 				<div className="footer-link-items">

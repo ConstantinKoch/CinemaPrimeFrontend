@@ -72,7 +72,7 @@ export default class FAQ extends Component{
                         </Accordion.Toggle>
                         <Accordion.Collapse eventKey="5">
                             <Card.Body className="card-body">
-                            Bitte schreibe uns eine Nachricht über unser <Link to={"/kontakt"}>Kontaktformular</Link> oder frage direkt im Kino nach.                            </Card.Body>
+                            Bitte schreiben Sie uns eine Nachricht über unser <Link to={"/kontakt"}>Kontaktformular</Link> oder fragen Sie direkt im Kino nach.                            </Card.Body>
                         </Accordion.Collapse>
                     </Card>
                 </Accordion>

@@ -207,9 +207,7 @@ export default class AGB extends React.Component {
 
                 <br />
                 <br />
-                <p>Stand der AGB Jan.2021</p>
-
-                <p><i><a href="http://www.agb.de">Gratis AGB</a> erstellt von agb.de</i></p>
+                <p>Stand der AGB Januar 2021</p>
             </div>
             </div>
             </div>

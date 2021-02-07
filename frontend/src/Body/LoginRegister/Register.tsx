@@ -59,7 +59,7 @@ const RegisterForm = () => {
                             <input type="password" id="password" required />
                         </div>
                         <div className="passwordRepeatField">
-                            <div id="passwordRepeatText">Passwort Wiederholen:</div>
+                            <div id="passwordRepeatText">Passwort wiederholen:</div>
                             <input type="password" id="passwordRepeat" required />
                         </div>
                         <p>mit der Registrierung akzeptieren Sie unsere <Link to="/AGB">AGB</Link></p>

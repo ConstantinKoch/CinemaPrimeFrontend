@@ -51,6 +51,7 @@
 .footer-links {
   width: 100%;
   max-width: 450px;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
 }
@@ -113,7 +114,6 @@
 .social-logo {
   color: #fff;
   justify-self: start;
-  margin-left: 20px;
   cursor: pointer;
   text-decoration: none;
   font-size: 2rem;
@@ -131,6 +131,7 @@
 
 .website-rights {
   color: #fff;
+  align-items: right;
   margin-bottom: 10px;
 }
 
