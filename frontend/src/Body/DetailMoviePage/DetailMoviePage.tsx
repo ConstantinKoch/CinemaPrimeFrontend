@@ -115,7 +115,7 @@ export default class DetailMoviePage extends Component<IProps, IState> {
 					className="readMoreContent"
 					charLimit={250} readMoreText="show more" readLessText="show less"
 					readMoreClassName="movieDetails_overview" readLessClassName="movieDetails_overview"
-					style={{lineHeight: 24, fontSize: 20, color: "blue"}} readLessStyle={{lineHeight: 24, fontSize: 16}}>
+					style={{lineHeight: 24, fontSize: 20, color: "blue", width: "40%"}} readLessStyle={{lineHeight: 24, fontSize: 20}}>
 						{this.state.movie?.overview}
 					</ReadMoreAndLess>
 				</div>
