@@ -20,12 +20,12 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 function App() {
 	return (
 		<div className="App">
-			<Router>
+			<Router basename='/cinemaprimefrontend'>
 			<div className="page-container">
 				{/*//to secure the new page starts at top*/}
 				<ScrollToTop />
 				<Navbar />
-				<Switch>
+				<Switch >
 					<div className="content-wrap">
 					<Route path="/movieDetails" component={DetailMoviePage} />
 					<Route path="/kontakt" component={ContactForm} />
@@ -38,7 +38,7 @@ function App() {
 					<Route path="/booking" component={SeatPage} />
 					<Route path="/info" exact component={InformationPage} />
 					<Route path="/faq" exact component={FAQ} />
-					<Route path="/" exact component={LandingPage} />
+					<Route path="CinemaPrimeFrontend/" component={LandingPage} />
 					</div>
 				</Switch>
 				<Footer/>
