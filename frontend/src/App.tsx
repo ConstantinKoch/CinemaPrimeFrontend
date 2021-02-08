@@ -20,7 +20,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 function App() {
 	return (
 		<div className="App">
-			<Router basename='/cinemaprimefrontend'>
+			<Router basename={process.env.PUBLIC_URL}>
 			<div className="page-container">
 				{/*//to secure the new page starts at top*/}
 				<ScrollToTop />
