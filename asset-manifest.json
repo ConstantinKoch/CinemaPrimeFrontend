@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/static/css/main.3346ae97.chunk.css",
-    "main.js": "/static/js/main.81eadc03.chunk.js",
-    "main.js.map": "/static/js/main.81eadc03.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.c60b7f5c.js",
-    "runtime-main.js.map": "/static/js/runtime-main.c60b7f5c.js.map",
-    "static/css/2.150d169a.chunk.css": "/static/css/2.150d169a.chunk.css",
-    "static/js/2.7ff05a78.chunk.js": "/static/js/2.7ff05a78.chunk.js",
-    "static/js/2.7ff05a78.chunk.js.map": "/static/js/2.7ff05a78.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/2.150d169a.chunk.css.map": "/static/css/2.150d169a.chunk.css.map",
-    "static/css/main.3346ae97.chunk.css.map": "/static/css/main.3346ae97.chunk.css.map",
-    "static/js/2.7ff05a78.chunk.js.LICENSE.txt": "/static/js/2.7ff05a78.chunk.js.LICENSE.txt",
-    "static/media/LandingPage.css": "/static/media/img_cinema_saal.d9cbf739.jpg"
+    "main.css": "/cinemaprimefrontend/static/css/main.49c9ce9f.chunk.css",
+    "main.js": "/cinemaprimefrontend/static/js/main.7b6f477b.chunk.js",
+    "main.js.map": "/cinemaprimefrontend/static/js/main.7b6f477b.chunk.js.map",
+    "runtime-main.js": "/cinemaprimefrontend/static/js/runtime-main.68a501cc.js",
+    "runtime-main.js.map": "/cinemaprimefrontend/static/js/runtime-main.68a501cc.js.map",
+    "static/css/2.150d169a.chunk.css": "/cinemaprimefrontend/static/css/2.150d169a.chunk.css",
+    "static/js/2.7ff05a78.chunk.js": "/cinemaprimefrontend/static/js/2.7ff05a78.chunk.js",
+    "static/js/2.7ff05a78.chunk.js.map": "/cinemaprimefrontend/static/js/2.7ff05a78.chunk.js.map",
+    "index.html": "/cinemaprimefrontend/index.html",
+    "static/css/2.150d169a.chunk.css.map": "/cinemaprimefrontend/static/css/2.150d169a.chunk.css.map",
+    "static/css/main.49c9ce9f.chunk.css.map": "/cinemaprimefrontend/static/css/main.49c9ce9f.chunk.css.map",
+    "static/js/2.7ff05a78.chunk.js.LICENSE.txt": "/cinemaprimefrontend/static/js/2.7ff05a78.chunk.js.LICENSE.txt",
+    "static/media/LandingPage.css": "/cinemaprimefrontend/static/media/img_cinema_saal.d9cbf739.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.c60b7f5c.js",
+    "static/js/runtime-main.68a501cc.js",
     "static/css/2.150d169a.chunk.css",
     "static/js/2.7ff05a78.chunk.js",
-    "static/css/main.3346ae97.chunk.css",
-    "static/js/main.81eadc03.chunk.js"
+    "static/css/main.49c9ce9f.chunk.css",
+    "static/js/main.7b6f477b.chunk.js"
   ]
 }
