@@ -38,7 +38,7 @@ function App() {
 					<Route path="/booking" component={SeatPage} />
 					<Route path="/info" exact component={InformationPage} />
 					<Route path="/faq" exact component={FAQ} />
-					<Route path="/" component={LandingPage} />
+					<Route path="/" exact component={LandingPage} />
 					</div>
 				</Switch>
 				<Footer/>
