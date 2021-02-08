@@ -1,4 +1,4 @@
-# CinemaPrimeAPI
+# CinemaPrime
 
 **Frontend:**
 - wird mit React erstellt
