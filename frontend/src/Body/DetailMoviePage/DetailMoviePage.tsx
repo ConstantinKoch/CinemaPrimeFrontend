@@ -36,13 +36,13 @@ interface IState {
 	screenings?: Screenings[];
 }
 
-{/*const options = [
-	{ value: '11.01.21 12:00', label: '11.01.21 12:00' },
-	{ value: '12.01.21 12:00', label: '12.01.21 12:00' },
-	{ value: '13.01.21 12:00', label: '13.01.21 12:00' },
-	{ value: '14.01.21 12:00', label: '14.01.21 12:00' } 
+const options = [
+	{ value: '11.01.21 18:00', label: '11.01.21 18:00' },
+	{ value: '12.01.21 19:00', label: '12.01.21 19:00' },
+	{ value: '13.01.21 18:00', label: '13.01.21 18:00' },
+	{ value: '14.01.21 21:00', label: '14.01.21 21:00' } 
   ];
-*/}
+
 export default class DetailMoviePage extends Component<IProps, IState> {
 	state:IState = ({finished_rendering: false, url : window.location.href, selected_date : '11.01.20_18:00', selected_label: 'test'})
 	
@@ -119,12 +119,10 @@ export default class DetailMoviePage extends Component<IProps, IState> {
 						{this.state.movie?.overview}
 					</ReadMoreAndLess>
 				</div>
-				{//uncomment to see select 
-				}
-					{/*<select value={this.state.selected_date} onChange={this.handleChange} className="movieDetails_select_new">
-						{(this.state.screenings === null) ? (null) : {this.state.screenings?.map((Screening) => (
-							<option value={Screening.id}>{Screening.date} {Screening.time}</option>))}
-						</select>*/}
+				<select value={this.state.selected_date} onChange={this.handleChange} className="movieDetails_select_new">				
+						{options.map((option) => (							
+							<option value={option.value}>{option.label}</option>))}							
+					</select>
 					<div className="movieDetails_btns_div">
 					<a className="movieLink_trailer" target="_blank" rel="noreferrer" href={`https://www.youtube.com/watch?v=${this.state.displayVideo?.id.videoId}`}>
 						<Button className="movieDetails_btn_trailer" variant="contained">
